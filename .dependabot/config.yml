@@ -1,0 +1,21 @@
+# https://dependabot.com/docs/config-file/
+
+version: 1
+
+update_configs:
+  - automerged_updates:
+      - match:
+          dependency_type: "development"
+    commit_message:
+      include_scope: true
+      prefix: "Build"
+    default_assignees:
+      - "localheinz"
+    default_labels:
+      - "dependency"
+    default_reviewers:
+      - "localheinz"
+    directory: "/"
+    package_manager: "php:composer"
+    update_schedule: "live"
+    version_requirement_updates: "increase_versions"
