@@ -15,9 +15,10 @@ use Ergebnis\License;
 use Ergebnis\PhpCsFixer\Config;
 
 $holder = License\Holder::fromString('Andreas Möller');
+$year = License\Year::fromString('2020');
 
 $header = <<<EOF
-Copyright (c) 2020 {$holder->toString()}
+Copyright (c) {$year->toString()} {$holder->toString()}
 
 For the full copyright and license information, please view
 the LICENSE file that was distributed with this source code.
