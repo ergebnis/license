@@ -3,6 +3,7 @@
 [![Continuous Deployment](https://github.com/ergebnis/license/workflows/Continuous%20Deployment/badge.svg)](https://github.com/ergebnis/license/actions)
 [![Continuous Integration](https://github.com/ergebnis/license/workflows/Continuous%20Integration/badge.svg)](https://github.com/ergebnis/license/actions)
 [![Code Coverage](https://codecov.io/gh/ergebnis/license/branch/master/graph/badge.svg)](https://codecov.io/gh/ergebnis/license)
+[![Type Coverage](https://shepherd.dev/github/ergebnis/license/coverage.svg)](https://shepherd.dev/github/ergebnis/license)
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/license/v/stable)](https://packagist.org/packages/ergebnis/license)
 [![Total Downloads](https://poser.pugx.org/ergebnis/license/downloads)](https://packagist.org/packages/ergebnis/license)
 
