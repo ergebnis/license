@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License;
 
-final class Year
+final class Year implements Period
 {
     private $value;
 
@@ -36,6 +36,16 @@ final class Year
         }
 
         return new self($value);
+    }
+
+    public function greaterThan(self $other): bool
+    {
+        return $this->value > $other->value;
+    }
+
+    public function equals(self $other): bool
+    {
+        return $this->value === $other->value;
     }
 
     public function toString(): string
