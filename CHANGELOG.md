@@ -8,4 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`675601b...master`][675601b...master].
 
+### Added
+
+* Added `Holder` ([#7]), by [@localheinz]
+
 [675601b...master]: https://github.com/ergebnis/license/compare/675601b...master
+
+[#7]: https://github.com/ergebnis/license/pull/6
+
+[@localheinz]: https://github.com/localheinz
