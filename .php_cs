@@ -11,10 +11,13 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/license
  */
 
+use Ergebnis\License;
 use Ergebnis\PhpCsFixer\Config;
 
-$header = <<<'EOF'
-Copyright (c) 2020 Andreas Möller
+$holder = License\Holder::fromString('Andreas Möller');
+
+$header = <<<EOF
+Copyright (c) 2020 {$holder->toString()}
 
 For the full copyright and license information, please view
 the LICENSE file that was distributed with this source code.
