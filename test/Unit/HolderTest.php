@@ -30,7 +30,7 @@ final class HolderTest extends Framework\TestCase
     use Helper;
 
     /**
-     * @dataProvider provideBlankOrEmptyValue
+     * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
      *
      * @param string $value
      */
@@ -39,20 +39,6 @@ final class HolderTest extends Framework\TestCase
         $this->expectException(Exception\InvalidHolder::class);
 
         Holder::fromString($value);
-    }
-
-    public function provideBlankOrEmptyValue(): \Generator
-    {
-        $values = [
-            'string-blank' => '  ',
-            'string-empty' => '',
-        ];
-
-        foreach ($values as $key => $value) {
-            yield $key => [
-                $value,
-            ];
-        }
     }
 
     /**
