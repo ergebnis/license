@@ -23,6 +23,7 @@ use PHPUnit\Framework;
  *
  * @covers \Ergebnis\License\Template
  *
+ * @uses \Ergebnis\License\Exception\InvalidFile
  * @uses \Ergebnis\License\Exception\InvalidReplacements
  */
 final class TemplateTest extends Framework\TestCase
@@ -46,6 +47,56 @@ Who would have thought?
 
 EOF
         );
+
+        $expected = <<<EOF
+Ah!
+
+This was done in {$when} by {$who}.
+
+Who would have thought?
+
+EOF;
+
+        self::assertSame($expected, $template->toString([
+            '<when>' => $when,
+            '<who>' => $who,
+        ]));
+    }
+
+    /**
+     * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
+     *
+     * @param string $name
+     */
+    public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
+    {
+        $this->expectException(Exception\InvalidFile::class);
+
+        Template::fromFile($name);
+    }
+
+    public function testFromFileRejectsNonExistentFile(): void
+    {
+        $this->expectException(Exception\InvalidFile::class);
+
+        Template::fromFile(__DIR__ . '/does-not-exist.txt');
+    }
+
+    public function testFromFileRejectsFileReferencingDirectory(): void
+    {
+        $this->expectException(Exception\InvalidFile::class);
+
+        Template::fromFile(__DIR__);
+    }
+
+    public function testFromFileReturnsTemplate(): void
+    {
+        $faker = self::faker();
+
+        $when = $faker->dateTime->format('Y');
+        $who = $faker->name;
+
+        $template = Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
 
         $expected = <<<EOF
 Ah!

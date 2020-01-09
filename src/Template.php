@@ -28,6 +28,40 @@ final class Template
     }
 
     /**
+     * @param string $name
+     *
+     * @throws Exception\InvalidFile
+     *
+     * @return self
+     */
+    public static function fromFile(string $name): self
+    {
+        if ('' === \trim($name)) {
+            throw Exception\InvalidFile::emptyFileName();
+        }
+
+        if (!\file_exists($name)) {
+            throw Exception\InvalidFile::doesNotExist($name);
+        }
+
+        if (!\is_file($name)) {
+            throw Exception\InvalidFile::doesNotExist($name);
+        }
+
+        if (!\is_readable($name)) {
+            throw Exception\InvalidFile::canNotBeRead($name);
+        }
+
+        $contents = \file_get_contents($name);
+
+        if (false === $contents) {
+            throw Exception\InvalidFile::canNotBeRead($name);
+        }
+
+        return new self($contents);
+    }
+
+    /**
      * @param array $replacements
      *
      * @throws Exception\InvalidReplacements
