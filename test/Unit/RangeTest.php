@@ -16,7 +16,6 @@ namespace Ergebnis\License\Test\Unit;
 use Ergebnis\License\Exception;
 use Ergebnis\License\Range;
 use Ergebnis\License\Year;
-use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
@@ -30,8 +29,6 @@ use PHPUnit\Framework;
  */
 final class RangeTest extends Framework\TestCase
 {
-    use Helper;
-
     public function testIncludingRequiresStartYearToBeEqualOrLessThanEndYear(): void
     {
         $start = Year::fromString('2020');

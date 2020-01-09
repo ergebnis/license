@@ -15,7 +15,6 @@ namespace Ergebnis\License\Test\Unit\Exception;
 
 use Ergebnis\License\Exception\InvalidRange;
 use Ergebnis\License\Year;
-use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
@@ -27,8 +26,6 @@ use PHPUnit\Framework;
  */
 final class InvalidRangeTest extends Framework\TestCase
 {
-    use Helper;
-
     public function testStartYearGreaterThanEndYearReturnsInvalidRange(): void
     {
         $start = Year::fromString('2020');
