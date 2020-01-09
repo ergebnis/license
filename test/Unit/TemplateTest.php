@@ -29,7 +29,7 @@ final class TemplateTest extends Framework\TestCase
 {
     use Helper;
 
-    public function testCreateReturnsTemplate(): void
+    public function testFromStringReturnsTemplate(): void
     {
         $faker = self::faker();
 
