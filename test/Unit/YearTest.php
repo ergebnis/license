@@ -90,4 +90,50 @@ final class YearTest extends Framework\TestCase
             ];
         }
     }
+
+    public function testEqualsReturnsFalseWhenValueIsDifferent(): void
+    {
+        $faker = self::faker()->unique();
+
+        $one = Year::fromString($faker->year);
+        $two = Year::fromString($faker->year);
+
+        self::assertFalse($one->equals($two));
+    }
+
+    public function testEqualsReturnsTrueWhenValueIsSame(): void
+    {
+        $value = self::faker()->year;
+
+        $one = Year::fromString($value);
+        $two = Year::fromString($value);
+
+        self::assertTrue($one->equals($two));
+    }
+
+    public function testGreaterThanReturnsFalseWhenValueIsEqual(): void
+    {
+        $value = self::faker()->year;
+
+        $one = Year::fromString($value);
+        $two = Year::fromString($value);
+
+        self::assertFalse($one->greaterThan($two));
+    }
+
+    public function testGreaterThanReturnsFalseWhenValueIsLess(): void
+    {
+        $one = Year::fromString('2019');
+        $two = Year::fromString('2020');
+
+        self::assertFalse($one->greaterThan($two));
+    }
+
+    public function testGreaterThanReturnsTrueWhenValueIsGreater(): void
+    {
+        $one = Year::fromString('2020');
+        $two = Year::fromString('2019');
+
+        self::assertTrue($one->greaterThan($two));
+    }
 }
