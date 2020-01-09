@@ -14,6 +14,7 @@ For a full diff see [`675601b...master`][675601b...master].
 * Added `Year` ([#10]), by [@localheinz]
 * Added `Range` ([#12]), by [@localheinz]
 * Added `Url` ([#19]), by [@localheinz]
+* Added `Template` ([#20]), by [@localheinz]
 
 [675601b...master]: https://github.com/ergebnis/license/compare/675601b...master
 
@@ -21,5 +22,6 @@ For a full diff see [`675601b...master`][675601b...master].
 [#10]: https://github.com/ergebnis/license/pull/10
 [#12]: https://github.com/ergebnis/license/pull/12
 [#19]: https://github.com/ergebnis/license/pull/18
+[#20]: https://github.com/ergebnis/license/pull/18
 
 [@localheinz]: https://github.com/localheinz
