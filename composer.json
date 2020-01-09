@@ -14,7 +14,8 @@
     }
   ],
   "require": {
-    "php": "^7.1"
+    "php": "^7.1",
+    "ext-filter": "*"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.2.0",
