@@ -1,13 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.8.2@90d6b73fd8062432030ef39b7b6694b3902daa31">
-  <file src="test/Unit/HolderTest.php">
-    <UndefinedMethod occurrences="1">
-      <code>testFromStringRejectsBlankOrEmptyValue</code>
-    </UndefinedMethod>
-  </file>
-  <file src="test/Unit/TemplateTest.php">
-    <UndefinedMethod occurrences="1">
-      <code>testFromFileRejectsBlankOrEmptyFileName</code>
-    </UndefinedMethod>
-  </file>
-</files>
+<files psalm-version="3.8.2@90d6b73fd8062432030ef39b7b6694b3902daa31"/>
