@@ -14,14 +14,12 @@ declare(strict_types=1);
 use Ergebnis\License;
 use Ergebnis\PhpCsFixer\Config;
 
-$holder = License\Holder::fromString('Andreas Möller');
 $range = License\Range::since(
     License\Year::fromString('2020'),
     new \DateTimeZone('UTC')
 );
-$url = License\Url::fromString('https://github.com/ergebnis/license');
 
-$headerTemplate = License\Template::fromFile(__DIR__ . '/.license/header-template.txt');
+$holder = License\Holder::fromString('Andreas Möller');
 
 $file = License\File::create(
     __DIR__ . '/LICENSE',
@@ -32,14 +30,15 @@ $file = License\File::create(
 
 $file->save();
 
-$header = $headerTemplate->toString([
-    '<file>' => \basename($file->name()),
-    '<holder>' => $holder->toString(),
-    '<range>' => $range->toString(),
-    '<url>' => $url->toString(),
-]);
+$header = License\Header::create(
+    License\Template::fromFile(__DIR__ . '/resource/header.txt'),
+    $range,
+    $holder,
+    $file,
+    License\Url::fromString('https://github.com/ergebnis/license')
+);
 
-$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php71($header));
+$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php71($header->toString()));
 
 $config->getFinder()
     ->ignoreDotFiles(false)
