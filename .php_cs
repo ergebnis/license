@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Copyright (c) 2020 Andreas Möller
  *
  * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * the LICENSE.md file that was distributed with this source code.
  *
  * @see https://github.com/ergebnis/license
  */
@@ -22,8 +22,8 @@ $range = License\Range::since(
 $holder = License\Holder::fromString('Andreas Möller');
 
 $file = License\File::create(
-    __DIR__ . '/LICENSE',
-    License\Template::fromFile(__DIR__ . '/resource/license/MIT.txt'),
+    __DIR__ . '/LICENSE.md',
+    License\Template::fromFile(__DIR__ . '/resource/license/MIT.md'),
     $range,
     $holder
 );
