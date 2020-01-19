@@ -1,0 +1,70 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Copyright (c) 2020 Andreas Möller
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
+ *
+ * @see https://github.com/ergebnis/license
+ */
+
+namespace Ergebnis\License;
+
+final class File
+{
+    private $name;
+
+    private $template;
+
+    private $period;
+
+    private $holder;
+
+    private function __construct(string $name, Template $template, Period $period, Holder $holder)
+    {
+        $this->name = $name;
+        $this->period = $period;
+        $this->holder = $holder;
+        $this->template = $template;
+    }
+
+    /**
+     * @param string   $name
+     * @param Template $template
+     * @param Period   $period
+     * @param Holder   $holder
+     *
+     * @throws Exception\InvalidFile
+     *
+     * @return self
+     */
+    public static function create(string $name, Template $template, Period $period, Holder $holder): self
+    {
+        if ('' === \trim($name)) {
+            throw Exception\InvalidFile::emptyFileName();
+        }
+
+        return new self(
+            $name,
+            $template,
+            $period,
+            $holder
+        );
+    }
+
+    public function name(): string
+    {
+        return $this->name;
+    }
+
+    public function save(): void
+    {
+        \file_put_contents($this->name, $this->template->toString([
+            '<holder>' => $this->holder->toString(),
+            '<range>' => $this->period->toString(),
+        ]));
+    }
+}
