@@ -22,17 +22,18 @@ $range = License\Range::since(
 $url = License\Url::fromString('https://github.com/ergebnis/license');
 
 $headerTemplate = License\Template::fromFile(__DIR__ . '/.license/header-template.txt');
-$fileTemplate = License\Template::fromFile(__DIR__ . '/.license/file-template.txt');
 
-$file = __DIR__ . '/LICENSE';
+$file = License\File::create(
+    __DIR__ . '/LICENSE',
+    License\Template::fromFile(__DIR__ . '/resource/license/MIT.txt'),
+    $range,
+    $holder
+);
 
-\file_put_contents($file, $fileTemplate->toString([
-    '<holder>' => $holder->toString(),
-    '<range>' => $range->toString(),
-]));
+$file->save();
 
 $header = $headerTemplate->toString([
-    '<file>' => \basename($file),
+    '<file>' => \basename($file->name()),
     '<holder>' => $holder->toString(),
     '<range>' => $range->toString(),
     '<url>' => $url->toString(),
