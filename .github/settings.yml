@@ -83,7 +83,7 @@ repository:
   allow_squash_merge: false
   archived: false
   default_branch: "master"
-  description: ":briefcase: Provides an abstraction for a license."
+  description: ":briefcase: Provides an abstraction of an open-source license."
   has_downloads: true
   has_issues: true
   has_pages: false
