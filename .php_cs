@@ -14,31 +14,19 @@ declare(strict_types=1);
 use Ergebnis\License;
 use Ergebnis\PhpCsFixer\Config;
 
-$range = License\Range::since(
-    License\Year::fromString('2020'),
-    new \DateTimeZone('UTC')
-);
-
-$holder = License\Holder::fromString('Andreas Möller');
-
-$file = License\File::create(
+$license = License\Type\MIT::markdown(
     __DIR__ . '/LICENSE.md',
-    License\Template::fromFile(__DIR__ . '/resource/license/MIT.md'),
-    $range,
-    $holder
-);
-
-$file->save();
-
-$header = License\Header::create(
-    License\Template::fromFile(__DIR__ . '/resource/header.txt'),
-    $range,
-    $holder,
-    $file,
+    License\Range::since(
+        License\Year::fromString('2020'),
+        new \DateTimeZone('UTC')
+    ),
+    License\Holder::fromString('Andreas Möller'),
     License\Url::fromString('https://github.com/ergebnis/license')
 );
 
-$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php71($header->toString()));
+$license->save();
+
+$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php71($license->header()));
 
 $config->getFinder()
     ->ignoreDotFiles(false)

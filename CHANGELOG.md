@@ -17,6 +17,7 @@ For a full diff see [`675601b...master`][675601b...master].
 * Added `Template` ([#20]), by [@localheinz]
 * Added `File` ([#33]), by [@localheinz]
 * Added `Header` ([#34]), by [@localheinz]
+* Added `MIT` ([#38]), by [@localheinz]
 
 [675601b...master]: https://github.com/ergebnis/license/compare/675601b...master
 
@@ -27,5 +28,6 @@ For a full diff see [`675601b...master`][675601b...master].
 [#20]: https://github.com/ergebnis/license/pull/20
 [#33]: https://github.com/ergebnis/license/pull/33
 [#34]: https://github.com/ergebnis/license/pull/34
+[#38]: https://github.com/ergebnis/license/pull/38
 
 [@localheinz]: https://github.com/localheinz
