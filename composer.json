@@ -1,7 +1,7 @@
 {
   "name": "ergebnis/license",
   "type": "library",
-  "description": "Provides an abstraction for a license.",
+  "description": "Provides an abstraction of an open-source license.",
   "keywords": [
     "license"
   ],
