@@ -35,4 +35,4 @@ Please have a look at [`CODE_OF_CONDUCT.md`](https://github.com/ergebnis/.github
 
 ## License
 
-This package is licensed using the MIT License.
+This package is licensed using the [MIT License](LICENSE.md).
