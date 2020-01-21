@@ -11,7 +11,7 @@ on:
 env:
   MIN_COVERED_MSI: 95
   MIN_MSI: 91
-  REQUIRED_PHP_EXTENSIONS: "mbstring"
+  REQUIRED_PHP_EXTENSIONS: "filter, mbstring"
 
 jobs:
   coding-standards:
