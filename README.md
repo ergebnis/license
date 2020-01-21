@@ -56,6 +56,7 @@ $license->save();
 $finder = Finder::create()->in(__DIR__);
 
 return Config::create()
+    ->setFinder($finder)
     ->setRules([
         'header_comment' => [
             'comment_type' => 'PHPDoc',
@@ -63,8 +64,7 @@ return Config::create()
             'location' => 'after_declare_strict',
             'separate' => 'both',
         ],
-    ])
-    ->setFinder($finder);
+    ]);
 ```
 
 :bulb: Also take a look at [`.php_cs`](.php_cs) of this project.
