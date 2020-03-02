@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61addacda4e499b32951cba548360a80",
+    "content-hash": "43ac96b65304472d149fa2637f1b6255",
     "packages": [],
     "packages-dev": [
         {
@@ -3726,7 +3726,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.4",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
