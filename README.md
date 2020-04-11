@@ -1,7 +1,9 @@
 # license
 
-[![Continuous Deployment](https://github.com/ergebnis/license/workflows/Continuous%20Deployment/badge.svg)](https://github.com/ergebnis/license/actions)
-[![Continuous Integration](https://github.com/ergebnis/license/workflows/Continuous%20Integration/badge.svg)](https://github.com/ergebnis/license/actions)
+[![Integrate](https://github.com/ergebnis/license/workflows/Integrate/badge.svg?branch=master)](https://github.com/ergebnis/license/actions)
+[![Prune](https://github.com/ergebnis/license/workflows/Prune/badge.svg?branch=master)](https://github.com/ergebnis/license/actions)
+[![Release](https://github.com/ergebnis/license/workflows/Release/badge.svg?branch=master)](https://github.com/ergebnis/license/actions)
+[![Renew](https://github.com/ergebnis/license/workflows/Renew/badge.svg?branch=master)](https://github.com/ergebnis/license/actions)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/license/branch/master/graph/badge.svg)](https://codecov.io/gh/ergebnis/license)
 [![Type Coverage](https://shepherd.dev/github/ergebnis/license/coverage.svg)](https://shepherd.dev/github/ergebnis/license)
@@ -156,4 +158,6 @@ Please have a look at [`CODE_OF_CONDUCT.md`](https://github.com/ergebnis/.github
 
 ## License
 
-This package is licensed using the [MIT License](LICENSE.md).
+This package is licensed using the MIT License.
+
+Please have a look at [`LICENSE.md`](LICENSE.md).
