@@ -62,7 +62,7 @@ final class Template
     }
 
     /**
-     * @param array $replacements
+     * @param array<string, string> $replacements
      *
      * @throws Exception\InvalidReplacements
      *
