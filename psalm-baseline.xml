@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.10.1@eeed5ecccc10131397f0eb7ee6da810c0be3a7fc">
+<files psalm-version="3.11.5@3c60609c218d4d4b3b257728b8089094e5c6c6c2">
+  <file src="src/Template.php">
+    <DocblockTypeContradiction occurrences="4">
+      <code>\is_string($key)</code>
+      <code>return !\is_string($key);</code>
+      <code>\is_string($value)</code>
+      <code>return !\is_string($value);</code>
+    </DocblockTypeContradiction>
+  </file>
   <file src="test/Unit/HolderTest.php">
     <MixedArgument occurrences="1">
       <code>$value</code>
@@ -20,6 +28,10 @@
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/TemplateTest.php">
+    <MixedArgumentTypeCoercion occurrences="2">
+      <code>$replacements</code>
+      <code>$replacements</code>
+    </MixedArgumentTypeCoercion>
     <MixedInferredReturnType occurrences="2">
       <code>\Generator</code>
       <code>\Generator</code>
