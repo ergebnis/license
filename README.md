@@ -17,7 +17,7 @@ Provides an abstraction of an open-source license.
 
 Run
 
-```shell
+```sh
 $ composer require --dev ergebnis/license
 ```
 

@@ -19,7 +19,7 @@ coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-norm
 
 .PHONY: dependency-analysis
 dependency-analysis: vendor ## Runs a dependency analysis with maglnet/composer-require-checker
-	docker run --interactive --rm --tty --volume ${PWD}:/app webfactory/composer-require-checker:2.0.0
+	tools/composer-require-checker check
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions
@@ -40,7 +40,6 @@ static-code-analysis: vendor ## Runs a static code analysis with phpstan/phpstan
 .PHONY: static-code-analysis-baseline
 static-code-analysis-baseline: vendor ## Generates a baseline for static code analysis with phpstan/phpstan and vimeo/psalm
 	mkdir -p .build/phpstan
-	echo '' > phpstan-baseline.neon
 	vendor/bin/phpstan analyze --configuration=phpstan.neon --generate-baseline=phpstan-baseline.neon
 	mkdir -p .build/psalm
 	vendor/bin/psalm --config=psalm.xml --set-baseline=psalm-baseline.xml
