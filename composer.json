@@ -14,7 +14,7 @@
     }
   ],
   "require": {
-    "php": "^7.1",
+    "php": "^7.2",
     "ext-filter": "*"
   },
   "require-dev": {
@@ -36,7 +36,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.1.33"
+      "php": "7.2.33"
     },
     "preferred-install": "dist",
     "sort-packages": true

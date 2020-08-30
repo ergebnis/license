@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`1.0.0...main`][1.0.0...main].
+For a full diff see [`1.0.1...main`][1.0.1...main].
+
+## [`1.0.1`][1.0.1]
+
+For a full diff see [`1.0.0...1.0.1`][1.0.0...1.0.1].
+
+## Changed
+
+* Dropped support for PHP 7.1 ([#171]), by [@localheinz]
 
 ## [`1.0.0`][1.0.0]
 
@@ -29,10 +37,12 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 
 [0.1.0]: https://github.com/ergebnis/license/releases/tag/0.1.0
 [1.0.0]: https://github.com/ergebnis/license/releases/tag/1.0.0
+[1.0.1]: https://github.com/ergebnis/license/releases/tag/1.0.1
 
 [675601b...0.1.0]: https://github.com/ergebnis/license/compare/675601b...0.1.0
 [0.1.0...1.0.0]: https://github.com/ergebnis/license/compare/0.1.0...1.0.0
-[1.0.0...main]: https://github.com/ergebnis/license/compare/1.0.0...main
+[1.0.0...1.0.1]: https://github.com/ergebnis/license/compare/1.0.0...1.0.1
+[1.0.1...main]: https://github.com/ergebnis/license/compare/1.0.1...main
 
 [#7]: https://github.com/ergebnis/license/pull/7
 [#10]: https://github.com/ergebnis/license/pull/10
@@ -42,5 +52,6 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#33]: https://github.com/ergebnis/license/pull/33
 [#34]: https://github.com/ergebnis/license/pull/34
 [#38]: https://github.com/ergebnis/license/pull/38
+[#171]: https://github.com/ergebnis/license/pull/171
 
 [@localheinz]: https://github.com/localheinz
