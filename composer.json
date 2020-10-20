@@ -32,7 +32,7 @@
     "phpunit/phpunit": "^8.5.8",
     "psalm/plugin-phpunit": "~0.12.2",
     "symfony/filesystem": "^5.1.7",
-    "vimeo/psalm": "^3.17"
+    "vimeo/psalm": "^3.18"
   },
   "config": {
     "platform": {
