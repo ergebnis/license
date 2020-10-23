@@ -78,8 +78,6 @@ final class RangeTest extends Framework\TestCase
 
     /**
      * @dataProvider provideTimeZone
-     *
-     * @param \DateTimeZone $timeZone
      */
     public function testSinceRejectsStartYearWhenStartYearIsGreaterThanCurrentYear(\DateTimeZone $timeZone): void
     {
@@ -100,8 +98,6 @@ final class RangeTest extends Framework\TestCase
 
     /**
      * @dataProvider provideTimeZone
-     *
-     * @param \DateTimeZone $timeZone
      */
     public function testSinceReturnsYearWhenStartYearEqualsCurrentYear(\DateTimeZone $timeZone): void
     {
@@ -123,8 +119,6 @@ final class RangeTest extends Framework\TestCase
 
     /**
      * @dataProvider provideTimeZone
-     *
-     * @param \DateTimeZone $timeZone
      */
     public function testSinceReturnsRangeWhenStartYearIsLessThanCurrentYear(\DateTimeZone $timeZone): void
     {

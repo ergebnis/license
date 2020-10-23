@@ -32,14 +32,7 @@ final class File
     }
 
     /**
-     * @param string   $name
-     * @param Template $template
-     * @param Period   $period
-     * @param Holder   $holder
-     *
      * @throws Exception\InvalidFile
-     *
-     * @return self
      */
     public static function create(string $name, Template $template, Period $period, Holder $holder): self
     {

@@ -54,8 +54,6 @@ final class FileTest extends Framework\TestCase
 
     /**
      * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
-     *
-     * @param string $name
      */
     public function testCreateRejectsBlankOrEmptyName(string $name): void
     {

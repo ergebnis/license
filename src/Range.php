@@ -23,12 +23,7 @@ final class Range implements Period
     }
 
     /**
-     * @param Year $start
-     * @param Year $end
-     *
      * @throws Exception\InvalidRange
-     *
-     * @return Period
      */
     public static function including(Year $start, Year $end): Period
     {
@@ -51,12 +46,7 @@ final class Range implements Period
     }
 
     /**
-     * @param Year          $start
-     * @param \DateTimeZone $timeZone
-     *
      * @throws Exception\InvalidRange
-     *
-     * @return Period
      */
     public static function since(Year $start, \DateTimeZone $timeZone): Period
     {

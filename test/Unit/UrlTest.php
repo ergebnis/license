@@ -31,8 +31,6 @@ final class UrlTest extends Framework\TestCase
 
     /**
      * @dataProvider provideInvalidValue
-     *
-     * @param string $value
      */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
@@ -58,8 +56,6 @@ final class UrlTest extends Framework\TestCase
 
     /**
      * @dataProvider provideValidValue
-     *
-     * @param string $value
      */
     public function testFromStringReturnsUrl(string $value): void
     {
@@ -79,8 +75,6 @@ final class UrlTest extends Framework\TestCase
 
     /**
      * @dataProvider provideUntrimmedValue
-     *
-     * @param string $value
      */
     public function testFromStringReturnsUrlWithTrimmedValue(string $value): void
     {

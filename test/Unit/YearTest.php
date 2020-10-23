@@ -31,8 +31,6 @@ final class YearTest extends Framework\TestCase
 
     /**
      * @dataProvider provideInvalidValue
-     *
-     * @param string $value
      */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
@@ -66,8 +64,6 @@ final class YearTest extends Framework\TestCase
 
     /**
      * @dataProvider provideValidValue
-     *
-     * @param string $value
      */
     public function testFromStringReturnsYear(string $value): void
     {
