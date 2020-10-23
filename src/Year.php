@@ -23,11 +23,7 @@ final class Year implements Period
     }
 
     /**
-     * @param string $value
-     *
      * @throws Exception\InvalidYear
-     *
-     * @return self
      */
     public static function fromString(string $value): self
     {

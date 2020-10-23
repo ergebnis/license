@@ -28,11 +28,7 @@ final class Template
     }
 
     /**
-     * @param string $name
-     *
      * @throws Exception\InvalidFile
-     *
-     * @return self
      */
     public static function fromFile(string $name): self
     {
@@ -65,8 +61,6 @@ final class Template
      * @param array<string, string> $replacements
      *
      * @throws Exception\InvalidReplacements
-     *
-     * @return string
      */
     public function toString(array $replacements): string
     {

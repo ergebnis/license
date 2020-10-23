@@ -25,11 +25,7 @@ final class Holder
     }
 
     /**
-     * @param string $value
-     *
      * @throws Exception\InvalidHolder
-     *
-     * @return self
      */
     public static function fromString(string $value): self
     {

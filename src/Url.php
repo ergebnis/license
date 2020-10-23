@@ -23,11 +23,7 @@ final class Url
     }
 
     /**
-     * @param string $value
-     *
      * @throws Exception\InvalidUrl
-     *
-     * @return self
      */
     public static function fromString(string $value): self
     {

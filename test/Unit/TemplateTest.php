@@ -65,8 +65,6 @@ EOF;
 
     /**
      * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
-     *
-     * @param string $name
      */
     public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
     {
@@ -115,8 +113,6 @@ EOF;
 
     /**
      * @dataProvider provideReplacementsWithInvalidKeys
-     *
-     * @param array $replacements
      */
     public function testToStringRejectsReplacementsWithInvalidKeys(array $replacements): void
     {
@@ -147,8 +143,6 @@ EOF;
 
     /**
      * @dataProvider provideReplacementsWithInvalidValues
-     *
-     * @param array $replacements
      */
     public function testToStringRejectsReplacementsWithInvalidValues(array $replacements): void
     {

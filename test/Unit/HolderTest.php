@@ -31,8 +31,6 @@ final class HolderTest extends Framework\TestCase
 
     /**
      * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
-     *
-     * @param string $value
      */
     public function testFromStringRejectsBlankOrEmptyValue(string $value): void
     {
@@ -43,8 +41,6 @@ final class HolderTest extends Framework\TestCase
 
     /**
      * @dataProvider provideMultilineValue
-     *
-     * @param string $value
      */
     public function testFromStringRejectsMultilineValue(string $value): void
     {
@@ -85,8 +81,6 @@ final class HolderTest extends Framework\TestCase
 
     /**
      * @dataProvider provideValidValue
-     *
-     * @param string $value
      */
     public function testFromStringReturnsHolder(string $value): void
     {
@@ -106,8 +100,6 @@ final class HolderTest extends Framework\TestCase
 
     /**
      * @dataProvider provideUntrimmedValue
-     *
-     * @param string $value
      */
     public function testFromStringReturnsHolderWithTrimmedValue(string $value): void
     {
