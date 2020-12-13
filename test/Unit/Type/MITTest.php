@@ -27,12 +27,12 @@ use Symfony\Component\Filesystem;
  *
  * @covers \Ergebnis\License\Type\MIT
  *
- * @uses \Ergebnis\License\Holder
- * @uses \Ergebnis\License\Url
  * @uses \Ergebnis\License\File
  * @uses \Ergebnis\License\Header
+ * @uses \Ergebnis\License\Holder
  * @uses \Ergebnis\License\Range
  * @uses \Ergebnis\License\Template
+ * @uses \Ergebnis\License\Url
  * @uses \Ergebnis\License\Year
  */
 final class MITTest extends Framework\TestCase
