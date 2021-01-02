@@ -1,9 +1,9 @@
 # license
 
-[![Integrate](https://github.com/ergebnis/license/workflows/Integrate/badge.svg?branch=main)](https://github.com/ergebnis/license/actions)
-[![Prune](https://github.com/ergebnis/license/workflows/Prune/badge.svg?branch=main)](https://github.com/ergebnis/license/actions)
-[![Release](https://github.com/ergebnis/license/workflows/Release/badge.svg?branch=main)](https://github.com/ergebnis/license/actions)
-[![Renew](https://github.com/ergebnis/license/workflows/Renew/badge.svg?branch=main)](https://github.com/ergebnis/license/actions)
+[![Integrate](https://github.com/ergebnis/license/workflows/Integrate/badge.svg)](https://github.com/ergebnis/license/actions)
+[![Prune](https://github.com/ergebnis/license/workflows/Prune/badge.svg)](https://github.com/ergebnis/license/actions)
+[![Release](https://github.com/ergebnis/license/workflows/Release/badge.svg)](https://github.com/ergebnis/license/actions)
+[![Renew](https://github.com/ergebnis/license/workflows/Renew/badge.svg)](https://github.com/ergebnis/license/actions)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/license/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/license)
 [![Type Coverage](https://shepherd.dev/github/ergebnis/license/coverage.svg)](https://shepherd.dev/github/ergebnis/license)
