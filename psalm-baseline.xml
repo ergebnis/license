@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.18.2@19aa905f7c3c7350569999a93c40ae91ae4e1626">
+<files psalm-version="4.6.1@e93e532e4eaad6d68c4d7b606853800eaceccc72">
   <file src="src/Template.php">
-    <DocblockTypeContradiction occurrences="4">
-      <code>\is_string($key)</code>
-      <code>\is_string($value)</code>
+    <DocblockTypeContradiction occurrences="2">
       <code>return !\is_string($key);</code>
       <code>return !\is_string($value);</code>
     </DocblockTypeContradiction>
@@ -28,6 +26,7 @@
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/TemplateTest.php">
+    <InvalidArrayOffset occurrences="1"/>
     <MixedArgumentTypeCoercion occurrences="2">
       <code>$replacements</code>
       <code>$replacements</code>
