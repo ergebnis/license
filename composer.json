@@ -24,15 +24,8 @@
   "require-dev": {
     "ergebnis/composer-normalize": "^2.19.0",
     "ergebnis/php-cs-fixer-config": "^2.14.0",
-    "ergebnis/phpstan-rules": "~0.15.3",
     "ergebnis/test-util": "^1.5.0",
     "infection/infection": "~0.15.3",
-    "jangregor/phpstan-prophecy": "~0.8.1",
-    "phpstan/extension-installer": "^1.1.0",
-    "phpstan/phpstan": "~0.12.99",
-    "phpstan/phpstan-deprecation-rules": "~0.12.6",
-    "phpstan/phpstan-phpunit": "~0.12.22",
-    "phpstan/phpstan-strict-rules": "~0.12.11",
     "phpunit/phpunit": "^8.5.22",
     "psalm/plugin-phpunit": "~0.16.1",
     "symfony/filesystem": "^5.4.0",
@@ -51,8 +44,7 @@
   "config": {
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
-      "ergebnis/composer-normalize": true,
-      "phpstan/extension-installer": true
+      "ergebnis/composer-normalize": true
     },
     "platform": {
       "php": "7.2.33"
