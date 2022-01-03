@@ -14,7 +14,7 @@ For a full diff see [`1.0.1...1.1.0`][1.0.1...1.1.0].
 
 ## Changed
 
-* Added support for PHP 7.1 ([#177]), by [@localheinz]
+- Added support for PHP 7.1 ([#177]), by [@localheinz]
 
 ## [`1.0.1`][1.0.1]
 
@@ -22,7 +22,7 @@ For a full diff see [`1.0.0...1.0.1`][1.0.0...1.0.1].
 
 ## Changed
 
-* Dropped support for PHP 7.1 ([#171]), by [@localheinz]
+- Dropped support for PHP 7.1 ([#171]), by [@localheinz]
 
 ## [`1.0.0`][1.0.0]
 
@@ -34,14 +34,14 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 
 ### Added
 
-* Added `Holder` ([#7]), by [@localheinz]
-* Added `Year` ([#10]), by [@localheinz]
-* Added `Range` ([#12]), by [@localheinz]
-* Added `Url` ([#19]), by [@localheinz]
-* Added `Template` ([#20]), by [@localheinz]
-* Added `File` ([#33]), by [@localheinz]
-* Added `Header` ([#34]), by [@localheinz]
-* Added `MIT` ([#38]), by [@localheinz]
+- Added `Holder` ([#7]), by [@localheinz]
+- Added `Year` ([#10]), by [@localheinz]
+- Added `Range` ([#12]), by [@localheinz]
+- Added `Url` ([#19]), by [@localheinz]
+- Added `Template` ([#20]), by [@localheinz]
+- Added `File` ([#33]), by [@localheinz]
+- Added `Header` ([#34]), by [@localheinz]
+- Added `MIT` ([#38]), by [@localheinz]
 
 [0.1.0]: https://github.com/ergebnis/license/releases/tag/0.1.0
 [1.0.0]: https://github.com/ergebnis/license/releases/tag/1.0.0
