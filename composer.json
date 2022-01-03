@@ -18,7 +18,7 @@
     "source": "https://github.com/ergebnis/license"
   },
   "require": {
-    "php": "^7.3 || ^8.0",
+    "php": "^7.4 || ^8.0",
     "ext-filter": "*"
   },
   "require-dev": {
@@ -48,7 +48,7 @@
       "infection/extension-installer": true
     },
     "platform": {
-      "php": "7.3.32"
+      "php": "7.4.26"
     },
     "preferred-install": "dist",
     "sort-packages": true

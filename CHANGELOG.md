@@ -11,6 +11,7 @@ For a full diff see [`1.1.0...main`][1.1.0...main].
 ## Changed
 
 - Dropped support for PHP 7.2 ([#416]), by [@localheinz]
+- Dropped support for PHP 7.3 ([#422]), by [@localheinz]
 
 ## [`1.1.0`][1.1.0]
 
@@ -69,5 +70,6 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#171]: https://github.com/ergebnis/license/pull/171
 [#177]: https://github.com/ergebnis/license/pull/177
 [#416]: https://github.com/ergebnis/license/pull/416
+[#422]: https://github.com/ergebnis/license/pull/422
 
 [@localheinz]: https://github.com/localheinz
