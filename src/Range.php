@@ -25,8 +25,10 @@ final class Range implements Period
     /**
      * @throws Exception\InvalidRange
      */
-    public static function including(Year $start, Year $end): Period
-    {
+    public static function including(
+        Year $start,
+        Year $end
+    ): Period {
         if ($start->greaterThan($end)) {
             throw Exception\InvalidRange::startYearGreaterThanEndYear(
                 $start,
@@ -48,8 +50,10 @@ final class Range implements Period
     /**
      * @throws Exception\InvalidRange
      */
-    public static function since(Year $start, \DateTimeZone $timeZone): Period
-    {
+    public static function since(
+        Year $start,
+        \DateTimeZone $timeZone
+    ): Period {
         $now = new \DateTimeImmutable(
             'now',
             $timeZone,

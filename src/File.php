@@ -20,8 +20,12 @@ final class File
     private $period;
     private $holder;
 
-    private function __construct(string $name, Template $template, Period $period, Holder $holder)
-    {
+    private function __construct(
+        string $name,
+        Template $template,
+        Period $period,
+        Holder $holder
+    ) {
         $this->name = $name;
         $this->period = $period;
         $this->holder = $holder;
@@ -31,8 +35,12 @@ final class File
     /**
      * @throws Exception\InvalidFile
      */
-    public static function create(string $name, Template $template, Period $period, Holder $holder): self
-    {
+    public static function create(
+        string $name,
+        Template $template,
+        Period $period,
+        Holder $holder
+    ): self {
         if ('' === \trim($name)) {
             throw Exception\InvalidFile::emptyFileName();
         }
