@@ -64,7 +64,8 @@ EOF;
     }
 
     /**
-     * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
      */
     public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
     {

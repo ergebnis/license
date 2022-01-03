@@ -30,7 +30,8 @@ final class HolderTest extends Framework\TestCase
     use Test\Util\Helper;
 
     /**
-     * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
      */
     public function testFromStringRejectsBlankOrEmptyValue(string $value): void
     {
