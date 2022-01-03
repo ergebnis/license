@@ -15,11 +15,11 @@ namespace Ergebnis\License;
 
 final class Header
 {
-    private $template;
-    private $period;
-    private $holder;
-    private $file;
-    private $url;
+    private Template $template;
+    private Period $period;
+    private Holder $holder;
+    private File $file;
+    private Url $url;
 
     private function __construct(
         Template $template,

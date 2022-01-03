@@ -15,10 +15,10 @@ namespace Ergebnis\License;
 
 final class File
 {
-    private $name;
-    private $template;
-    private $period;
-    private $holder;
+    private string $name;
+    private Template $template;
+    private Period $period;
+    private Holder $holder;
 
     private function __construct(
         string $name,
