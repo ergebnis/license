@@ -50,7 +50,7 @@ final class YearTest extends Framework\TestCase
                 '%s %s %s',
                 $faker->word(),
                 $faker->year(),
-                $faker->word()
+                $faker->word(),
             ),
             'string-empty' => '',
         ];

@@ -38,7 +38,7 @@ final class RangeTest extends Framework\TestCase
 
         Range::including(
             $start,
-            $end
+            $end,
         );
     }
 
@@ -49,7 +49,7 @@ final class RangeTest extends Framework\TestCase
 
         $range = Range::including(
             $start,
-            $end
+            $end,
         );
 
         self::assertInstanceOf(Year::class, $range);
@@ -63,13 +63,13 @@ final class RangeTest extends Framework\TestCase
 
         $years = Range::including(
             $start,
-            $end
+            $end,
         );
 
         $expected = \sprintf(
             '%s-%s',
             $start->toString(),
-            $end->toString()
+            $end->toString(),
         );
 
         self::assertInstanceOf(Range::class, $years);
@@ -83,7 +83,7 @@ final class RangeTest extends Framework\TestCase
     {
         $now = new \DateTimeImmutable(
             '+1 year',
-            $timeZone
+            $timeZone,
         );
 
         $start = Year::fromString($now->format('Y'));
@@ -92,7 +92,7 @@ final class RangeTest extends Framework\TestCase
 
         Range::since(
             $start,
-            $timeZone
+            $timeZone,
         );
     }
 
@@ -103,14 +103,14 @@ final class RangeTest extends Framework\TestCase
     {
         $now = new \DateTimeImmutable(
             'now',
-            $timeZone
+            $timeZone,
         );
 
         $start = Year::fromString($now->format('Y'));
 
         $year = Range::since(
             $start,
-            $timeZone
+            $timeZone,
         );
 
         self::assertInstanceOf(Year::class, $year);
@@ -124,19 +124,19 @@ final class RangeTest extends Framework\TestCase
     {
         $twoYearsAgo = new \DateTimeImmutable(
             '-2 years',
-            $timeZone
+            $timeZone,
         );
 
         $now = new \DateTimeImmutable(
             'now',
-            $timeZone
+            $timeZone,
         );
 
         $start = Year::fromString($twoYearsAgo->format('Y'));
 
         $range = Range::since(
             $start,
-            $timeZone
+            $timeZone,
         );
 
         self::assertInstanceOf(Range::class, $range);
@@ -144,7 +144,7 @@ final class RangeTest extends Framework\TestCase
         $expected = \sprintf(
             '%s-%s',
             $start->toString(),
-            $now->format('Y')
+            $now->format('Y'),
         );
 
         self::assertSame($expected, $range->toString());

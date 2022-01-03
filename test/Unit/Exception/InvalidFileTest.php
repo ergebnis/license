@@ -42,14 +42,14 @@ final class InvalidFileTest extends Framework\TestCase
         $name = \sprintf(
             '%s.%s',
             $faker->slug(),
-            $faker->fileExtension()
+            $faker->fileExtension(),
         );
 
         $exception = InvalidFile::doesNotExist($name);
 
         $expected = \sprintf(
             'A file with name "%s" does not exist.',
-            $name
+            $name,
         );
 
         self::assertSame($expected, $exception->getMessage());
@@ -62,14 +62,14 @@ final class InvalidFileTest extends Framework\TestCase
         $name = \sprintf(
             '%s.%s',
             $faker->slug(),
-            $faker->fileExtension()
+            $faker->fileExtension(),
         );
 
         $exception = InvalidFile::canNotBeRead($name);
 
         $expected = \sprintf(
             'File with name "%s" can not be read.',
-            $name
+            $name,
         );
 
         self::assertSame($expected, $exception->getMessage());

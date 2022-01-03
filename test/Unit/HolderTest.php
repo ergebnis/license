@@ -69,9 +69,9 @@ final class HolderTest extends Framework\TestCase
                             $start,
                             \implode(
                                 $middle,
-                                $words
+                                $words,
                             ),
-                            $end
+                            $end,
                         ),
                     ];
                 }
@@ -114,7 +114,7 @@ final class HolderTest extends Framework\TestCase
             yield $key => [
                 \sprintf(
                     ' %s ',
-                    $value
+                    $value,
                 ),
             ];
         }

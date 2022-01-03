@@ -89,7 +89,7 @@ final class UrlTest extends Framework\TestCase
             yield $key => [
                 \sprintf(
                     " %s \n\n",
-                    $value
+                    $value,
                 ),
             ];
         }

@@ -44,7 +44,7 @@ final class File
             $name,
             $template,
             $period,
-            $holder
+            $holder,
         );
     }
 

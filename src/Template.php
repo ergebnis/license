@@ -83,7 +83,7 @@ final class Template
         return \str_replace(
             \array_keys($replacements),
             $replacements,
-            $this->value
+            $this->value,
         );
     }
 }

@@ -38,7 +38,7 @@ final class MIT
             $name,
             $fileTemplate,
             $period,
-            $holder
+            $holder,
         );
 
         $header = Header::create(
@@ -46,7 +46,7 @@ final class MIT
             $period,
             $holder,
             $file,
-            $url
+            $url,
         );
 
         $this->file = $file;
@@ -61,7 +61,7 @@ final class MIT
             Template::fromFile(__DIR__ . '/../../resource/header.txt'),
             $period,
             $holder,
-            $url
+            $url,
         );
     }
 
@@ -73,7 +73,7 @@ final class MIT
             Template::fromFile(__DIR__ . '/../../resource/header.txt'),
             $period,
             $holder,
-            $url
+            $url,
         );
     }
 

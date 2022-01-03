@@ -24,7 +24,7 @@ final class InvalidFile extends \InvalidArgumentException implements Exception
     {
         return new self(\sprintf(
             'A file with name "%s" does not exist.',
-            $name
+            $name,
         ));
     }
 
@@ -32,7 +32,7 @@ final class InvalidFile extends \InvalidArgumentException implements Exception
     {
         return new self(\sprintf(
             'File with name "%s" can not be read.',
-            $name
+            $name,
         ));
     }
 }

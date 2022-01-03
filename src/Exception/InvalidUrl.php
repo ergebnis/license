@@ -19,7 +19,7 @@ final class InvalidUrl extends \InvalidArgumentException implements Exception
     {
         return new self(\sprintf(
             'Value "%s" is not a valid URL.',
-            $value
+            $value,
         ));
     }
 }

@@ -41,7 +41,7 @@ final class Header
             $period,
             $holder,
             $file,
-            $url
+            $url,
         );
     }
 

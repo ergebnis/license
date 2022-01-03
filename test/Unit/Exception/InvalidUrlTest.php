@@ -34,7 +34,7 @@ final class InvalidUrlTest extends Framework\TestCase
 
         $expected = \sprintf(
             'Value "%s" is not a valid URL.',
-            $value
+            $value,
         );
 
         self::assertSame($expected, $exception->getMessage());
