@@ -22,15 +22,8 @@ use Ergebnis\License\Url;
 
 final class MIT
 {
-    /**
-     * @var File
-     */
-    private $file;
-
-    /**
-     * @var Header
-     */
-    private $header;
+    private File $file;
+    private Header $header;
 
     private function __construct(
         string $name,

@@ -17,7 +17,7 @@ use Ergebnis\License\Exception\InvalidHolder;
 
 final class Holder
 {
-    private $value;
+    private string $value;
 
     private function __construct(string $value)
     {
