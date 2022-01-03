@@ -28,7 +28,7 @@ final class InvalidYearTest extends Framework\TestCase
 
     public function testFromValueReturnsInvalidYear(): void
     {
-        $value = self::faker()->sentence;
+        $value = self::faker()->sentence();
 
         $exception = InvalidYear::fromValue($value);
 

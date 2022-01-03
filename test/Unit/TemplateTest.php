@@ -35,7 +35,7 @@ final class TemplateTest extends Framework\TestCase
         $faker = self::faker();
 
         $when = $faker->dateTime->format('Y');
-        $who = $faker->name;
+        $who = $faker->name();
 
         $template = Template::fromString(
             <<<'EOF'
@@ -92,7 +92,7 @@ EOF;
         $faker = self::faker();
 
         $when = $faker->dateTime->format('Y');
-        $who = $faker->name;
+        $who = $faker->name();
 
         $template = Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
 
@@ -158,7 +158,7 @@ EOF;
         $faker = self::faker();
 
         $values = [
-            'array' => $faker->words,
+            'array' => $faker->words(),
             'boolean-false' => false,
             'boolean-true' => true,
             'float' => $faker->randomFloat(2, 1),
