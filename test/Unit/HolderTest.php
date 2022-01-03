@@ -61,7 +61,7 @@ final class HolderTest extends Framework\TestCase
             foreach ($newLineCharacters as $middle) {
                 foreach ($newLineCharacters as $end) {
                     /** @var string[] $words */
-                    $words = self::faker()->words;
+                    $words = self::faker()->words();
 
                     yield [
                         \sprintf(

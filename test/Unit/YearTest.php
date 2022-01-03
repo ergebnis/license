@@ -44,13 +44,13 @@ final class YearTest extends Framework\TestCase
         $faker = self::faker();
 
         $values = [
-            'string-arbitrary' => $faker->sentence,
+            'string-arbitrary' => $faker->sentence(),
             'string-blank' => '  ',
             'string-containing-year' => \sprintf(
                 '%s %s %s',
-                $faker->word,
-                $faker->year,
-                $faker->word
+                $faker->word(),
+                $faker->year(),
+                $faker->word()
             ),
             'string-empty' => '',
         ];
@@ -91,15 +91,15 @@ final class YearTest extends Framework\TestCase
     {
         $faker = self::faker()->unique();
 
-        $one = Year::fromString($faker->year);
-        $two = Year::fromString($faker->year);
+        $one = Year::fromString($faker->year());
+        $two = Year::fromString($faker->year());
 
         self::assertFalse($one->equals($two));
     }
 
     public function testEqualsReturnsTrueWhenValueIsSame(): void
     {
-        $value = self::faker()->year;
+        $value = self::faker()->year();
 
         $one = Year::fromString($value);
         $two = Year::fromString($value);
@@ -109,7 +109,7 @@ final class YearTest extends Framework\TestCase
 
     public function testGreaterThanReturnsFalseWhenValueIsEqual(): void
     {
-        $value = self::faker()->year;
+        $value = self::faker()->year();
 
         $one = Year::fromString($value);
         $two = Year::fromString($value);

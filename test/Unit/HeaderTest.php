@@ -45,10 +45,10 @@ final class HeaderTest extends Framework\TestCase
 
         $template = Template::fromFile(__DIR__ . '/../../resource/header.txt');
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
+        $holder = Holder::fromString($faker->name());
         $file = File::create(
             \sprintf(
                 '%s/%s.txt',

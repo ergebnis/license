@@ -61,10 +61,10 @@ final class FileTest extends Framework\TestCase
 
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
+        $holder = Holder::fromString($faker->name());
 
         $this->expectException(Exception\InvalidFile::class);
 
@@ -83,14 +83,14 @@ final class FileTest extends Framework\TestCase
         $name = \sprintf(
             '%s/%s.txt',
             __DIR__,
-            $faker->slug
+            $faker->slug()
         );
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
+        $holder = Holder::fromString($faker->name());
 
         $file = File::create(
             $name,
@@ -109,14 +109,14 @@ final class FileTest extends Framework\TestCase
         $name = \sprintf(
             '%s/%s.txt',
             self::workspaceDirectory(),
-            $faker->slug
+            $faker->slug()
         );
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
+        $holder = Holder::fromString($faker->name());
 
         $file = File::create(
             $name,

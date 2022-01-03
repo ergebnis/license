@@ -28,7 +28,7 @@ final class InvalidUrlTest extends Framework\TestCase
 
     public function testFromValueReturnsInvalidUrl(): void
     {
-        $value = self::faker()->sentence;
+        $value = self::faker()->sentence();
 
         $exception = InvalidUrl::fromValue($value);
 

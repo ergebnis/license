@@ -59,7 +59,7 @@ final class MITTest extends Framework\TestCase
 
         $baseName = \sprintf(
             '%s.txt',
-            $faker->slug
+            $faker->slug()
         );
         $name = \sprintf(
             '%s/%s',
@@ -67,11 +67,11 @@ final class MITTest extends Framework\TestCase
             $baseName
         );
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
-        $url = Url::fromString($faker->url);
+        $holder = Holder::fromString($faker->name());
+        $url = Url::fromString($faker->url());
 
         $license = MIT::markdown(
             $name,
@@ -99,7 +99,7 @@ TXT;
 
         $name = \sprintf(
             '%s.txt',
-            $faker->slug
+            $faker->slug()
         );
         $baseName = \sprintf(
             '%s/%s',
@@ -107,11 +107,11 @@ TXT;
             $name
         );
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
-        $url = Url::fromString($faker->url);
+        $holder = Holder::fromString($faker->name());
+        $url = Url::fromString($faker->url());
 
         $license = MIT::text(
             $baseName,
@@ -140,14 +140,14 @@ TXT;
         $name = \sprintf(
             '%s/%s.md',
             self::workspaceDirectory(),
-            $faker->slug
+            $faker->slug()
         );
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
-        $url = Url::fromString($faker->url);
+        $holder = Holder::fromString($faker->name());
+        $url = Url::fromString($faker->url());
 
         $license = MIT::markdown(
             $name,
@@ -190,14 +190,14 @@ TXT;
         $name = \sprintf(
             '%s/%s.txt',
             self::workspaceDirectory(),
-            $faker->slug
+            $faker->slug()
         );
         $range = Range::since(
-            Year::fromString($faker->year),
-            new \DateTimeZone($faker->timezone)
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone())
         );
-        $holder = Holder::fromString($faker->name);
-        $url = Url::fromString($faker->url);
+        $holder = Holder::fromString($faker->name());
+        $url = Url::fromString($faker->url());
 
         $license = MIT::text(
             $name,

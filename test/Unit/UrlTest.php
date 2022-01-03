@@ -42,7 +42,7 @@ final class UrlTest extends Framework\TestCase
     public function provideInvalidValue(): \Generator
     {
         $values = [
-            'string-arbitrary' => self::faker()->sentence,
+            'string-arbitrary' => self::faker()->sentence(),
             'string-blank' => '  ',
             'string-empty' => '',
         ];

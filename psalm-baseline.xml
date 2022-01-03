@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.6.1@e93e532e4eaad6d68c4d7b606853800eaceccc72">
+<files psalm-version="4.17.0@6f4707aa41c9174353a6434bba3fc8840f981d9c">
   <file src="src/Template.php">
     <DocblockTypeContradiction occurrences="2">
       <code>return !\is_string($key);</code>
       <code>return !\is_string($value);</code>
     </DocblockTypeContradiction>
+  </file>
+  <file src="test/Unit/Exception/InvalidFileTest.php">
+    <MixedArgument occurrences="2">
+      <code>$faker-&gt;fileExtension()</code>
+      <code>$faker-&gt;fileExtension()</code>
+    </MixedArgument>
+  </file>
+  <file src="test/Unit/FileTest.php">
+    <MixedArgument occurrences="3">
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;timezone()</code>
+    </MixedArgument>
+    <UndefinedMagicMethod occurrences="3">
+      <code>timezone</code>
+      <code>timezone</code>
+      <code>timezone</code>
+    </UndefinedMagicMethod>
+  </file>
+  <file src="test/Unit/HeaderTest.php">
+    <MixedArgument occurrences="1">
+      <code>$faker-&gt;timezone()</code>
+    </MixedArgument>
+    <UndefinedMagicMethod occurrences="1">
+      <code>timezone</code>
+    </UndefinedMagicMethod>
   </file>
   <file src="test/Unit/HolderTest.php">
     <MixedArgument occurrences="1">
@@ -35,6 +61,28 @@
       <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
+  </file>
+  <file src="test/Unit/Type/MITTest.php">
+    <MixedArgument occurrences="8">
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;timezone()</code>
+      <code>$faker-&gt;url()</code>
+      <code>$faker-&gt;url()</code>
+      <code>$faker-&gt;url()</code>
+      <code>$faker-&gt;url()</code>
+    </MixedArgument>
+    <UndefinedMagicMethod occurrences="8">
+      <code>timezone</code>
+      <code>timezone</code>
+      <code>timezone</code>
+      <code>timezone</code>
+      <code>url</code>
+      <code>url</code>
+      <code>url</code>
+      <code>url</code>
+    </UndefinedMagicMethod>
   </file>
   <file src="test/Unit/UrlTest.php">
     <MixedArgument occurrences="1">
