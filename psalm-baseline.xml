@@ -66,9 +66,4 @@
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
-  <file src="test/Util/DataProvider/Text.php">
-    <MixedInferredReturnType occurrences="1">
-      <code>\Generator</code>
-    </MixedInferredReturnType>
-  </file>
 </files>
