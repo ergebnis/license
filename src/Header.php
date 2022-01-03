@@ -21,8 +21,13 @@ final class Header
     private $file;
     private $url;
 
-    private function __construct(Template $template, Period $period, Holder $holder, File $file, Url $url)
-    {
+    private function __construct(
+        Template $template,
+        Period $period,
+        Holder $holder,
+        File $file,
+        Url $url
+    ) {
         $this->template = $template;
         $this->period = $period;
         $this->holder = $holder;
@@ -30,8 +35,13 @@ final class Header
         $this->url = $url;
     }
 
-    public static function create(Template $template, Period $period, Holder $holder, File $file, Url $url): self
-    {
+    public static function create(
+        Template $template,
+        Period $period,
+        Holder $holder,
+        File $file,
+        Url $url
+    ): self {
         return new self(
             $template,
             $period,

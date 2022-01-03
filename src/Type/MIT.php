@@ -32,8 +32,14 @@ final class MIT
      */
     private $header;
 
-    private function __construct(string $name, Template $fileTemplate, Template $headerTemplate, Period $period, Holder $holder, Url $url)
-    {
+    private function __construct(
+        string $name,
+        Template $fileTemplate,
+        Template $headerTemplate,
+        Period $period,
+        Holder $holder,
+        Url $url
+    ) {
         $file = File::create(
             $name,
             $fileTemplate,
@@ -53,8 +59,12 @@ final class MIT
         $this->header = $header;
     }
 
-    public static function markdown(string $name, Period $period, Holder $holder, Url $url): self
-    {
+    public static function markdown(
+        string $name,
+        Period $period,
+        Holder $holder,
+        Url $url
+    ): self {
         return new self(
             $name,
             Template::fromFile(__DIR__ . '/../../resource/license/MIT.md'),
@@ -65,8 +75,12 @@ final class MIT
         );
     }
 
-    public static function text(string $name, Period $period, Holder $holder, Url $url): self
-    {
+    public static function text(
+        string $name,
+        Period $period,
+        Holder $holder,
+        Url $url
+    ): self {
         return new self(
             $name,
             Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt'),
