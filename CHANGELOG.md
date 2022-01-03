@@ -22,7 +22,7 @@ For a full diff see [`1.0.0...1.0.1`][1.0.0...1.0.1].
 
 ## Changed
 
-- Dropped support for PHP 7.1 ([#171]), by [@localheinz]
+- Dropped support for PHP 8.0 ([#171]), by [@localheinz]
 
 ## [`1.0.0`][1.0.0]
 
