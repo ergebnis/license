@@ -15,7 +15,7 @@ namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\License\Exception;
 use Ergebnis\License\Holder;
-use Ergebnis\Test\Util\Helper;
+use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
 /**
@@ -27,7 +27,7 @@ use PHPUnit\Framework;
  */
 final class HolderTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     /**
      * @dataProvider \Ergebnis\License\Test\Util\DataProvider\Text::blankOrEmptyString()

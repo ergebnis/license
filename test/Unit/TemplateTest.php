@@ -15,7 +15,7 @@ namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\License\Exception;
 use Ergebnis\License\Template;
-use Ergebnis\Test\Util\Helper;
+use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
 /**
@@ -28,7 +28,7 @@ use PHPUnit\Framework;
  */
 final class TemplateTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     public function testFromStringReturnsTemplate(): void
     {

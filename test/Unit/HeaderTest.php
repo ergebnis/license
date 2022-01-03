@@ -18,9 +18,9 @@ use Ergebnis\License\Header;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Range;
 use Ergebnis\License\Template;
+use Ergebnis\License\Test;
 use Ergebnis\License\Url;
 use Ergebnis\License\Year;
-use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
@@ -37,7 +37,7 @@ use PHPUnit\Framework;
  */
 final class HeaderTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     public function testToStringReturnsStringRepresentation(): void
     {

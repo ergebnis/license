@@ -18,8 +18,8 @@ use Ergebnis\License\File;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Range;
 use Ergebnis\License\Template;
+use Ergebnis\License\Test;
 use Ergebnis\License\Year;
-use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
@@ -36,7 +36,7 @@ use Symfony\Component\Filesystem;
  */
 final class FileTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     protected function setUp(): void
     {
