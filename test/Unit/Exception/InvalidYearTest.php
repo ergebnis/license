@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit\Exception;
 
 use Ergebnis\License\Exception\InvalidYear;
-use Ergebnis\Test\Util\Helper;
+use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
 /**
@@ -24,7 +24,7 @@ use PHPUnit\Framework;
  */
 final class InvalidYearTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     public function testFromValueReturnsInvalidYear(): void
     {

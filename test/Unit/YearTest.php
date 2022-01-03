@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\License\Exception;
+use Ergebnis\License\Test;
 use Ergebnis\License\Year;
-use Ergebnis\Test\Util\Helper;
 use PHPUnit\Framework;
 
 /**
@@ -27,7 +27,7 @@ use PHPUnit\Framework;
  */
 final class YearTest extends Framework\TestCase
 {
-    use Helper;
+    use Test\Util\Helper;
 
     /**
      * @dataProvider provideInvalidValue
