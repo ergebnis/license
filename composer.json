@@ -1,24 +1,28 @@
 {
   "name": "ergebnis/license",
-  "type": "library",
   "description": "Provides an abstraction of an open-source license.",
+  "license": "MIT",
+  "type": "library",
   "keywords": [
     "license"
   ],
-  "homepage": "https://github.com/ergebnis/license",
-  "license": "MIT",
   "authors": [
     {
       "name": "Andreas Möller",
       "email": "am@localheinz.com"
     }
   ],
+  "homepage": "https://github.com/ergebnis/license",
+  "support": {
+    "issues": "https://github.com/ergebnis/license/issues",
+    "source": "https://github.com/ergebnis/license"
+  },
   "require": {
     "php": "^7.2 || ^8.0",
     "ext-filter": "*"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.16.0",
+    "ergebnis/composer-normalize": "^2.19.0",
     "ergebnis/php-cs-fixer-config": "^2.14.0",
     "ergebnis/phpstan-rules": "~0.15.3",
     "ergebnis/test-util": "^1.5.0",
@@ -34,6 +38,16 @@
     "symfony/filesystem": "^5.4.0",
     "vimeo/psalm": "^4.17.0"
   },
+  "autoload": {
+    "psr-4": {
+      "Ergebnis\\License\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ergebnis\\License\\Test\\": "test/"
+    }
+  },
   "config": {
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
@@ -45,19 +59,5 @@
     },
     "preferred-install": "dist",
     "sort-packages": true
-  },
-  "autoload": {
-    "psr-4": {
-      "Ergebnis\\License\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Ergebnis\\License\\Test\\": "test/"
-    }
-  },
-  "support": {
-    "issues": "https://github.com/ergebnis/license/issues",
-    "source": "https://github.com/ergebnis/license"
   }
 }
