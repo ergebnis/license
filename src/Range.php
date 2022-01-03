@@ -30,7 +30,7 @@ final class Range implements Period
         if ($start->greaterThan($end)) {
             throw Exception\InvalidRange::startYearGreaterThanEndYear(
                 $start,
-                $end
+                $end,
             );
         }
 
@@ -41,7 +41,7 @@ final class Range implements Period
         return new self(\sprintf(
             '%s-%s',
             $start->toString(),
-            $end->toString()
+            $end->toString(),
         ));
     }
 
@@ -52,7 +52,7 @@ final class Range implements Period
     {
         $now = new \DateTimeImmutable(
             'now',
-            $timeZone
+            $timeZone,
         );
 
         $current = Year::fromString($now->format('Y'));
@@ -60,7 +60,7 @@ final class Range implements Period
         if ($start->greaterThan($current)) {
             throw Exception\InvalidRange::startYearGreaterThanCurrentYear(
                 $start,
-                $current
+                $current,
             );
         }
 
@@ -71,7 +71,7 @@ final class Range implements Period
         return new self(\sprintf(
             '%s-%s',
             $start->toString(),
-            $current->toString()
+            $current->toString(),
         ));
     }
 

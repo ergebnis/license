@@ -19,7 +19,7 @@ final class InvalidYear extends \InvalidArgumentException implements Exception
     {
         return new self(\sprintf(
             'Value "%s" is not a valid year.',
-            $value
+            $value,
         ));
     }
 }

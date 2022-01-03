@@ -22,7 +22,7 @@ final class InvalidRange extends \InvalidArgumentException implements Exception
         return new self(\sprintf(
             'Start year "%s" can not be greater than end year "%s".',
             $start->toString(),
-            $end->toString()
+            $end->toString(),
         ));
     }
 
@@ -31,7 +31,7 @@ final class InvalidRange extends \InvalidArgumentException implements Exception
         return new self(\sprintf(
             'Start year "%s" can not be greater than current year "%s".',
             $start->toString(),
-            $current->toString()
+            $current->toString(),
         ));
     }
 }

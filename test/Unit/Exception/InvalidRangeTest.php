@@ -33,13 +33,13 @@ final class InvalidRangeTest extends Framework\TestCase
 
         $exception = InvalidRange::startYearGreaterThanEndYear(
             $start,
-            $end
+            $end,
         );
 
         $expected = \sprintf(
             'Start year "%s" can not be greater than end year "%s".',
             $start->toString(),
-            $end->toString()
+            $end->toString(),
         );
 
         self::assertSame($expected, $exception->getMessage());
@@ -52,13 +52,13 @@ final class InvalidRangeTest extends Framework\TestCase
 
         $exception = InvalidRange::startYearGreaterThanCurrentYear(
             $start,
-            $current
+            $current,
         );
 
         $expected = \sprintf(
             'Start year "%s" can not be greater than current year "%s".',
             $start->toString(),
-            $current->toString()
+            $current->toString(),
         );
 
         self::assertSame($expected, $exception->getMessage());

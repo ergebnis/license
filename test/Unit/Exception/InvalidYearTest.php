@@ -34,7 +34,7 @@ final class InvalidYearTest extends Framework\TestCase
 
         $expected = \sprintf(
             'Value "%s" is not a valid year.',
-            $value
+            $value,
         );
 
         self::assertSame($expected, $exception->getMessage());

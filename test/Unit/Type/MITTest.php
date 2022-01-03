@@ -59,16 +59,16 @@ final class MITTest extends Framework\TestCase
 
         $baseName = \sprintf(
             '%s.txt',
-            $faker->slug()
+            $faker->slug(),
         );
         $name = \sprintf(
             '%s/%s',
             self::workspaceDirectory(),
-            $baseName
+            $baseName,
         );
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
@@ -77,7 +77,7 @@ final class MITTest extends Framework\TestCase
             $name,
             $range,
             $holder,
-            $url
+            $url,
         );
 
         $expected = <<<TXT
@@ -99,16 +99,16 @@ TXT;
 
         $name = \sprintf(
             '%s.txt',
-            $faker->slug()
+            $faker->slug(),
         );
         $baseName = \sprintf(
             '%s/%s',
             self::workspaceDirectory(),
-            $name
+            $name,
         );
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
@@ -117,7 +117,7 @@ TXT;
             $baseName,
             $range,
             $holder,
-            $url
+            $url,
         );
 
         $expected = <<<TXT
@@ -140,11 +140,11 @@ TXT;
         $name = \sprintf(
             '%s/%s.md',
             self::workspaceDirectory(),
-            $faker->slug()
+            $faker->slug(),
         );
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
@@ -153,7 +153,7 @@ TXT;
             $name,
             $range,
             $holder,
-            $url
+            $url,
         );
 
         $license->save();
@@ -190,11 +190,11 @@ TXT;
         $name = \sprintf(
             '%s/%s.txt',
             self::workspaceDirectory(),
-            $faker->slug()
+            $faker->slug(),
         );
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
@@ -203,7 +203,7 @@ TXT;
             $name,
             $range,
             $holder,
-            $url
+            $url,
         );
 
         $license->save();

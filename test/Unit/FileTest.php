@@ -62,7 +62,7 @@ final class FileTest extends Framework\TestCase
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
 
@@ -72,7 +72,7 @@ final class FileTest extends Framework\TestCase
             $name,
             $template,
             $range,
-            $holder
+            $holder,
         );
     }
 
@@ -83,12 +83,12 @@ final class FileTest extends Framework\TestCase
         $name = \sprintf(
             '%s/%s.txt',
             __DIR__,
-            $faker->slug()
+            $faker->slug(),
         );
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
 
@@ -96,7 +96,7 @@ final class FileTest extends Framework\TestCase
             $name,
             $template,
             $range,
-            $holder
+            $holder,
         );
 
         self::assertSame($name, $file->name());
@@ -109,12 +109,12 @@ final class FileTest extends Framework\TestCase
         $name = \sprintf(
             '%s/%s.txt',
             self::workspaceDirectory(),
-            $faker->slug()
+            $faker->slug(),
         );
         $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
         $range = Range::since(
             Year::fromString($faker->year()),
-            new \DateTimeZone($faker->timezone())
+            new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
 
@@ -122,7 +122,7 @@ final class FileTest extends Framework\TestCase
             $name,
             $template,
             $range,
-            $holder
+            $holder,
         );
 
         $file->save();
