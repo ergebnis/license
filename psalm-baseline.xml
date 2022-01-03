@@ -12,26 +12,6 @@
       <code>$faker-&gt;fileExtension()</code>
     </MixedArgument>
   </file>
-  <file src="test/Unit/FileTest.php">
-    <MixedArgument occurrences="3">
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;timezone()</code>
-    </MixedArgument>
-    <UndefinedMagicMethod occurrences="3">
-      <code>timezone</code>
-      <code>timezone</code>
-      <code>timezone</code>
-    </UndefinedMagicMethod>
-  </file>
-  <file src="test/Unit/HeaderTest.php">
-    <MixedArgument occurrences="1">
-      <code>$faker-&gt;timezone()</code>
-    </MixedArgument>
-    <UndefinedMagicMethod occurrences="1">
-      <code>timezone</code>
-    </UndefinedMagicMethod>
-  </file>
   <file src="test/Unit/HolderTest.php">
     <MixedArgument occurrences="1">
       <code>$value</code>
@@ -62,28 +42,6 @@
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
-  <file src="test/Unit/Type/MITTest.php">
-    <MixedArgument occurrences="8">
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;timezone()</code>
-      <code>$faker-&gt;url()</code>
-      <code>$faker-&gt;url()</code>
-      <code>$faker-&gt;url()</code>
-      <code>$faker-&gt;url()</code>
-    </MixedArgument>
-    <UndefinedMagicMethod occurrences="8">
-      <code>timezone</code>
-      <code>timezone</code>
-      <code>timezone</code>
-      <code>timezone</code>
-      <code>url</code>
-      <code>url</code>
-      <code>url</code>
-      <code>url</code>
-    </UndefinedMagicMethod>
-  </file>
   <file src="test/Unit/UrlTest.php">
     <MixedArgument occurrences="1">
       <code>$value</code>
@@ -99,6 +57,10 @@
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/YearTest.php">
+    <MixedArgument occurrences="2">
+      <code>$faker-&gt;year()</code>
+      <code>$faker-&gt;year()</code>
+    </MixedArgument>
     <MixedInferredReturnType occurrences="2">
       <code>\Generator</code>
       <code>\Generator</code>
