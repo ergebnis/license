@@ -16,13 +16,9 @@ namespace Ergebnis\License;
 final class Header
 {
     private $template;
-
     private $period;
-
     private $holder;
-
     private $file;
-
     private $url;
 
     private function __construct(Template $template, Period $period, Holder $holder, File $file, Url $url)
