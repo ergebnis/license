@@ -43,14 +43,14 @@ final class MITTest extends Framework\TestCase
     {
         $filesystem = new Filesystem\Filesystem();
 
-        $filesystem->mkdir(self::workspaceDirectory());
+        $filesystem->mkdir(self::temporaryDirectory());
     }
 
     protected function tearDown(): void
     {
         $filesystem = new Filesystem\Filesystem();
 
-        $filesystem->remove(self::workspaceDirectory());
+        $filesystem->remove(self::temporaryDirectory());
     }
 
     public function testHeaderReturnsHeaderForMarkdownLicense(): void
@@ -63,7 +63,7 @@ final class MITTest extends Framework\TestCase
         );
         $name = \sprintf(
             '%s/%s',
-            self::workspaceDirectory(),
+            self::temporaryDirectory(),
             $baseName,
         );
         $range = Range::since(
@@ -103,7 +103,7 @@ TXT;
         );
         $baseName = \sprintf(
             '%s/%s',
-            self::workspaceDirectory(),
+            self::temporaryDirectory(),
             $name,
         );
         $range = Range::since(
@@ -139,7 +139,7 @@ TXT;
 
         $name = \sprintf(
             '%s/%s.md',
-            self::workspaceDirectory(),
+            self::temporaryDirectory(),
             $faker->slug(),
         );
         $range = Range::since(
@@ -189,7 +189,7 @@ TXT;
 
         $name = \sprintf(
             '%s/%s.txt',
-            self::workspaceDirectory(),
+            self::temporaryDirectory(),
             $faker->slug(),
         );
         $range = Range::since(
@@ -233,7 +233,7 @@ TXT;
         self::assertSame($expected, \file_get_contents($name));
     }
 
-    private static function workspaceDirectory(): string
+    private static function temporaryDirectory(): string
     {
         return __DIR__ . '/../../../.build/test';
     }
