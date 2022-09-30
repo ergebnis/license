@@ -137,9 +137,4 @@ final class FileTest extends Framework\TestCase
 
         self::assertSame($expected, \file_get_contents($file->name()));
     }
-
-    private static function temporaryDirectory(): string
-    {
-        return __DIR__ . '/../../.build/test';
-    }
 }

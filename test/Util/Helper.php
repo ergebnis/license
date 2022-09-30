@@ -35,4 +35,9 @@ trait Helper
 
         return $fakers[$locale];
     }
+
+    private static function temporaryDirectory(): string
+    {
+        return __DIR__ . '/../../.build/test';
+    }
 }

@@ -232,9 +232,4 @@ TXT;
 
         self::assertSame($expected, \file_get_contents($name));
     }
-
-    private static function temporaryDirectory(): string
-    {
-        return __DIR__ . '/../../../.build/test';
-    }
 }
