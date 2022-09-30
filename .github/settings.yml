@@ -18,6 +18,7 @@ branches:
           - "Coding Standards (7.4, locked)"
           - "Dependency Analysis (7.4, locked)"
           - "Mutation Tests (7.4, locked)"
+          - "Security (7.4, locked)"
           - "Static Code Analysis (7.4, locked)"
           - "Tests (7.4, highest)"
           - "Tests (7.4, locked)"

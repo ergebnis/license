@@ -46,3 +46,4 @@ tests: vendor ## Runs unit tests with phpunit/phpunit
 vendor: composer.json composer.lock
 	composer validate --strict
 	composer install --no-interaction --no-progress
+	composer audit
