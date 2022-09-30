@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception\InvalidYear;
+use Ergebnis\License\Exception;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
@@ -30,7 +30,7 @@ final class InvalidYearTest extends Framework\TestCase
     {
         $value = self::faker()->sentence();
 
-        $exception = InvalidYear::fromValue($value);
+        $exception = Exception\InvalidYear::fromValue($value);
 
         $expected = \sprintf(
             'Value "%s" is not a valid year.',

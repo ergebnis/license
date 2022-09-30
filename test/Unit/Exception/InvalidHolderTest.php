@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception\InvalidHolder;
+use Ergebnis\License\Exception;
 use PHPUnit\Framework;
 
 /**
@@ -25,14 +25,14 @@ final class InvalidHolderTest extends Framework\TestCase
 {
     public function testBlankOrEmptyReturnsInvalidHolder(): void
     {
-        $exception = InvalidHolder::blankOrEmpty();
+        $exception = Exception\InvalidHolder::blankOrEmpty();
 
         self::assertSame('Holder cannot be a blank or empty string.', $exception->getMessage());
     }
 
     public function testMultilineReturnsInvalidHolder(): void
     {
-        $exception = InvalidHolder::multiline();
+        $exception = Exception\InvalidHolder::multiline();
 
         self::assertSame('Holder cannot be a multiline string.', $exception->getMessage());
     }

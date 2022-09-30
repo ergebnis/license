@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception\InvalidUrl;
+use Ergebnis\License\Exception;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
@@ -30,7 +30,7 @@ final class InvalidUrlTest extends Framework\TestCase
     {
         $value = self::faker()->sentence();
 
-        $exception = InvalidUrl::fromValue($value);
+        $exception = Exception\InvalidUrl::fromValue($value);
 
         $expected = \sprintf(
             'Value "%s" is not a valid URL.',

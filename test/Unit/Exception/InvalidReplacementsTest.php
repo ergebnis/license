@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception\InvalidReplacements;
+use Ergebnis\License\Exception;
 use PHPUnit\Framework;
 
 /**
@@ -27,14 +27,14 @@ final class InvalidReplacementsTest extends Framework\TestCase
 {
     public function testKeysReturnsInvalidReplacements(): void
     {
-        $exception = InvalidReplacements::keys();
+        $exception = Exception\InvalidReplacements::keys();
 
         self::assertSame('Keys need to be strings.', $exception->getMessage());
     }
 
     public function testValuesReturnsInvalidReplacements(): void
     {
-        $exception = InvalidReplacements::values();
+        $exception = Exception\InvalidReplacements::values();
 
         self::assertSame('Values need to be strings.', $exception->getMessage());
     }

@@ -16,7 +16,7 @@ namespace Ergebnis\License\Test\Unit\Type;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Range;
 use Ergebnis\License\Test;
-use Ergebnis\License\Type\MIT;
+use Ergebnis\License\Type;
 use Ergebnis\License\Url;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
@@ -73,7 +73,7 @@ final class MITTest extends Framework\TestCase
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
 
-        $license = MIT::markdown(
+        $license = Type\MIT::markdown(
             $name,
             $range,
             $holder,
@@ -113,7 +113,7 @@ TXT;
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
 
-        $license = MIT::text(
+        $license = Type\MIT::text(
             $baseName,
             $range,
             $holder,
@@ -149,7 +149,7 @@ TXT;
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
 
-        $license = MIT::markdown(
+        $license = Type\MIT::markdown(
             $name,
             $range,
             $holder,
@@ -199,7 +199,7 @@ TXT;
         $holder = Holder::fromString($faker->name());
         $url = Url::fromString($faker->url());
 
-        $license = MIT::text(
+        $license = Type\MIT::text(
             $name,
             $range,
             $holder,
