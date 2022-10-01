@@ -30,12 +30,12 @@ Of course, all of this can be automated, can't it?
 
 ### Configuration for `friendsofphp/php-cs-fixer`
 
-With [`friendsofphp/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) you can use the configuration file `.php_cs` to
+With [`friendsofphp/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) you can use the configuration file `.php-cs-fixer.php` to
 
 * save the license to a file, e.g. `LICENSE` or `LICENSE.md`
 * specify a file-level header using the `header_comment` fixer that will be replaced in PHP files
 
-Here's an example of a `.php_cs` file:
+Here's an example of a `.php-cs-fixer.php` file:
 
 ```php
 <?php
@@ -70,7 +70,7 @@ return Config::create()
     ]);
 ```
 
-:bulb: Also take a look at [`.php_cs`](.php_cs) of this project.
+:bulb: Also take a look at [`.php-cs-fixer.php`](.php-cs-fixer.php) of this project.
 
 ### GitHub Actions
 
@@ -97,7 +97,7 @@ jobs:
         run: "composer install --no-interaction --no-progress --no-suggest"
 
       - name: "Run friendsofphp/php-cs-fixer"
-        run: "vendor/bin/php-cs-fixer fix --config=.php_cs --diff --dry-run --verbose"
+        run: "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --dry-run --verbose"
 
       - name: "Open pull request updating license year"
         uses: "gr2m/create-or-update-pull-request-action@v1.2.9"
