@@ -40,7 +40,7 @@ final class MIT
             $holder,
         );
 
-        $header = Header::create(
+        $header = Header::createWithReferenceToLicenseFile(
             $headerTemplate,
             $period,
             $holder,

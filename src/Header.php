@@ -35,7 +35,7 @@ final class Header
         $this->url = $url;
     }
 
-    public static function create(
+    public static function createWithReferenceToLicenseFile(
         Template $template,
         Period $period,
         Holder $holder,
