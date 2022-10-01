@@ -78,4 +78,32 @@ final class HeaderTest extends Framework\TestCase
 
         self::assertSame($expected, $header->toString());
     }
+
+    public function testCreateWithoutReferenceToLicenseFileReturnsHeader(): void
+    {
+        $faker = self::faker();
+
+        $template = Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt');
+        $range = Range::since(
+            Year::fromString($faker->year()),
+            new \DateTimeZone($faker->timezone()),
+        );
+        $holder = Holder::fromString($faker->name());
+        $url = Url::fromString($faker->url);
+
+        $header = Header::createWithoutReferenceToLicenseFile(
+            $template,
+            $range,
+            $holder,
+            $url,
+        );
+
+        $expected = $template->toString([
+            '<holder>' => $holder->toString(),
+            '<range>' => $range->toString(),
+            '<url>' => $url->toString(),
+        ]);
+
+        self::assertSame($expected, $header->toString());
+    }
 }
