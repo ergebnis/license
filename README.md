@@ -32,8 +32,8 @@ Of course, all of this can be automated, can't it?
 
 With [`friendsofphp/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) you can use the configuration file `.php-cs-fixer.php` to
 
-* save the license to a file, e.g. `LICENSE` or `LICENSE.md`
-* specify a file-level header using the `header_comment` fixer that will be replaced in PHP files
+- save the license to a file, e.g. `LICENSE` or `LICENSE.md`
+- specify a file-level header using the `header_comment` fixer that will be replaced in PHP files
 
 Here's an example of a `.php-cs-fixer.php` file:
 
@@ -109,7 +109,7 @@ jobs:
           body: |
             This PR
 
-            * [x] updates the license year
+            - [x] updates the license year
           commit-message: "Enhancement: Update license year"
           path: "."
           title: "Enhancement: Update license year"
@@ -131,7 +131,7 @@ Note that pull requests opened or commits pushed by GitHub Actions will not trig
            body: |
              This PR
 
-             * [x] updates the license year
+             - [x] updates the license year
            commit-message: "Enhancement: Update license year"
            path: "."
            title: "Enhancement: Update license year"
@@ -143,7 +143,7 @@ Note that pull requests opened or commits pushed by GitHub Actions will not trig
 
 The following license types are currently available:
 
-* [`Ergebnis\License\Type\MIT`](src/Type/MIT.php)
+- [`Ergebnis\License\Type\MIT`](src/Type/MIT.php)
 
 :bulb: Need a different license type? Feel free to open a pull request!
 
