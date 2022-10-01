@@ -39,7 +39,7 @@ final class HeaderTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    public function testToStringReturnsStringRepresentation(): void
+    public function testCreateWithReferenceToLicenseFileReturnsHeader(): void
     {
         $faker = self::faker();
 
@@ -61,7 +61,7 @@ final class HeaderTest extends Framework\TestCase
         );
         $url = Url::fromString($faker->url);
 
-        $header = Header::create(
+        $header = Header::createWithReferenceToLicenseFile(
             $template,
             $range,
             $holder,

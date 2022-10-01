@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.2.0...main`][1.2.0...main].
 
+## Changed
+
+- Renamed `Header::create()` to `Header::createWithReferenceToLicenseFile()` ([#533]), by [@localheinz]
+
 ## [`1.2.0`][1.2.0]
 
 For a full diff see [`1.1.0...1.2.0`][1.1.0...1.2.0].
@@ -77,5 +81,6 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#177]: https://github.com/ergebnis/license/pull/177
 [#416]: https://github.com/ergebnis/license/pull/416
 [#422]: https://github.com/ergebnis/license/pull/422
+[#533]: https://github.com/ergebnis/license/pull/533
 
 [@localheinz]: https://github.com/localheinz
