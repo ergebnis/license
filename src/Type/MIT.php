@@ -61,7 +61,7 @@ final class MIT
         return new self(
             $name,
             Template::fromFile(__DIR__ . '/../../resource/license/MIT.md'),
-            Template::fromFile(__DIR__ . '/../../resource/header.txt'),
+            Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
             $period,
             $holder,
             $url,
@@ -77,7 +77,7 @@ final class MIT
         return new self(
             $name,
             Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt'),
-            Template::fromFile(__DIR__ . '/../../resource/header.txt'),
+            Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
             $period,
             $holder,
             $url,

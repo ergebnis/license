@@ -43,7 +43,7 @@ final class HeaderTest extends Framework\TestCase
     {
         $faker = self::faker();
 
-        $template = Template::fromFile(__DIR__ . '/../../resource/header.txt');
+        $template = Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt');
         $range = Range::since(
             Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
