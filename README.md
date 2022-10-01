@@ -40,6 +40,8 @@ Here's an example of a `.php-cs-fixer.php` file:
 ```php
 <?php
 
+declare(strict_types=1);
+
 use Ergebnis\License;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
