@@ -35,12 +35,21 @@ With [`friendsofphp/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
 - save the license to a file, e.g. `LICENSE` or `LICENSE.md`
 - specify a file-level header using the `header_comment` fixer that will be replaced in PHP files
 
-Here's an example of a `.php-cs-fixer.php` file:
+Here's an example of a `.php-cs-fixer.php` file for an open-source project using the [`MIT`](src/Type/MIT.php) license type:
 
 ```php
 <?php
 
 declare(strict_types=1);
+
+/**
+ * Copyright (c) 2020-2022 Andreas Möller
+ *
+ * For the full copyright and license information, please view
+ * the LICENSE.md file that was distributed with this source code.
+ *
+ * @see https://github.com/ergebnis/license
+ */
 
 use Ergebnis\License;
 use PhpCsFixer\Config;
@@ -73,6 +82,47 @@ return Config::create()
 ```
 
 :bulb: Also take a look at [`.php-cs-fixer.php`](.php-cs-fixer.php) of this project.
+
+Here's an example of a `.php-cs-fixer.php` file for a closed-source project using the [`None`](src/Type/None.php) license type:
+
+
+```php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Copyright (c) 2011-2019 Andreas Möller
+ *
+ * @see https://github.com/localheinz/localheinz.com
+ */
+
+use Ergebnis\License;
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$license = License\Type\None::text(
+    License\Range::since(
+        License\Year::fromString('2020'),
+        new \DateTimeZone('UTC')
+    ),
+    License\Holder::fromString('Andreas Möller'),
+    License\Url::fromString('https://github.com/localheinz/localheinz.com')
+);
+
+$finder = Finder::create()->in(__DIR__);
+
+return Config::create()
+    ->setFinder($finder)
+    ->setRules([
+        'header_comment' => [
+            'comment_type' => 'PHPDoc',
+            'header' => $license->header(),
+            'location' => 'after_declare_strict',
+            'separate' => 'both',
+        ],
+    ]);
+```
 
 ### GitHub Actions
 
@@ -144,6 +194,7 @@ Note that pull requests opened or commits pushed by GitHub Actions will not trig
 The following license types are currently available:
 
 - [`Ergebnis\License\Type\MIT`](src/Type/MIT.php)
+- [`Ergebnis\License\Type\None`](src/Type/None.php)
 
 :bulb: Need a different license type? Feel free to open a pull request!
 

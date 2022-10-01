@@ -11,6 +11,7 @@ For a full diff see [`1.2.0...main`][1.2.0...main].
 ## Added
 
 - Added `Header::createWithoutReferenceToLicenseFile()` ([#534]), by [@localheinz]
+- Added `None` ([#535]), by [@localheinz]
 
 ## Changed
 
