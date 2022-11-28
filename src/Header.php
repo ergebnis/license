@@ -26,7 +26,7 @@ final class Header
         Period $period,
         Holder $holder,
         ?File $file,
-        Url $url
+        Url $url,
     ) {
         $this->template = $template;
         $this->period = $period;
@@ -40,7 +40,7 @@ final class Header
         Period $period,
         Holder $holder,
         File $file,
-        Url $url
+        Url $url,
     ): self {
         return new self(
             $template,
@@ -55,7 +55,7 @@ final class Header
         Template $template,
         Period $range,
         Holder $holder,
-        Url $url
+        Url $url,
     ): self {
         return new self(
             $template,

@@ -27,7 +27,7 @@ final class None
         Template $headerTemplate,
         Period $period,
         Holder $holder,
-        Url $url
+        Url $url,
     ) {
         $header = Header::createWithoutReferenceToLicenseFile(
             $headerTemplate,
@@ -42,7 +42,7 @@ final class None
     public static function text(
         Period $period,
         Holder $holder,
-        Url $url
+        Url $url,
     ): self {
         return new self(
             Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt'),

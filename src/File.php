@@ -24,7 +24,7 @@ final class File
         string $name,
         Template $template,
         Period $period,
-        Holder $holder
+        Holder $holder,
     ) {
         $this->name = $name;
         $this->period = $period;
@@ -39,7 +39,7 @@ final class File
         string $name,
         Template $template,
         Period $period,
-        Holder $holder
+        Holder $holder,
     ): self {
         if ('' === \trim($name)) {
             throw Exception\InvalidFile::emptyFileName();
