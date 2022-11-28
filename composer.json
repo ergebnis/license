@@ -29,7 +29,7 @@
     "infection/infection": "~0.26.6",
     "phpunit/phpunit": "^9.5.26",
     "psalm/plugin-phpunit": "~0.18.3",
-    "symfony/filesystem": "^5.4.13",
+    "symfony/filesystem": "^6.0.13",
     "vimeo/psalm": "^4.29.0"
   },
   "autoload": {
