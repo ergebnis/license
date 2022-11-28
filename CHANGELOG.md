@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`2.0.0...main`][2.0.0...main].
+For a full diff see [`2.1.0...main`][2.1.0...main].
+
+## [`2.1.0`][2.1.0]
+
+For a full diff see [`2.0.0...2.1.0`][2.0.0...2.1.0].
 
 ## Changed
 
@@ -75,6 +79,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [1.1.0]: https://github.com/ergebnis/license/releases/tag/1.1.0
 [1.2.0]: https://github.com/ergebnis/license/releases/tag/1.2.0
 [2.0.0]: https://github.com/ergebnis/license/releases/tag/2.0.0
+[2.1.0]: https://github.com/ergebnis/license/releases/tag/2.1.0
 
 [675601b...0.1.0]: https://github.com/ergebnis/license/compare/675601b...0.1.0
 [0.1.0...1.0.0]: https://github.com/ergebnis/license/compare/0.1.0...1.0.0
@@ -82,7 +87,8 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [1.0.1...1.1.0]: https://github.com/ergebnis/license/compare/1.0.1...1.1.0
 [1.1.0...1.2.0]: https://github.com/ergebnis/license/compare/1.1.0...1.2.0
 [1.2.0...2.0.0]: https://github.com/ergebnis/license/compare/1.2.0...2.0.0
-[2.0.0...main]: https://github.com/ergebnis/license/compare/2.0.0...main
+[2.0.0...2.1.0]: https://github.com/ergebnis/license/compare/2.0.0...2.1.0
+[2.1.0...main]: https://github.com/ergebnis/license/compare/2.1.0...main
 
 [#7]: https://github.com/ergebnis/license/pull/7
 [#10]: https://github.com/ergebnis/license/pull/10
