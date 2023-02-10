@@ -39,6 +39,9 @@ final class YearTest extends Framework\TestCase
         Year::fromString($value);
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideInvalidValue(): \Generator
     {
         $faker = self::faker();
@@ -72,6 +75,9 @@ final class YearTest extends Framework\TestCase
         self::assertSame($value, $year->toString());
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideValidValue(): \Generator
     {
         $values = [

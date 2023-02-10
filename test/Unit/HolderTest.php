@@ -50,6 +50,9 @@ final class HolderTest extends Framework\TestCase
         Holder::fromString($value);
     }
 
+    /**
+     * @return \Generator<int, array{0: string}>
+     */
     public static function provideMultilineValue(): \Generator
     {
         $newLineCharacters = [
@@ -90,6 +93,9 @@ final class HolderTest extends Framework\TestCase
         self::assertSame($value, $holder->toString());
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideValidValue(): \Generator
     {
         foreach (self::validValues() as $key => $value) {
@@ -109,6 +115,9 @@ final class HolderTest extends Framework\TestCase
         self::assertSame(\trim($value), $holder->toString());
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideUntrimmedValue(): \Generator
     {
         foreach (self::validValues() as $key => $value) {
@@ -121,6 +130,9 @@ final class HolderTest extends Framework\TestCase
         }
     }
 
+    /**
+     * @return array<string, string>
+     */
     private static function validValues(): array
     {
         return [

@@ -12,24 +12,10 @@
       <code>$faker-&gt;fileExtension()</code>
     </MixedArgument>
   </file>
-  <file src="test/Unit/HolderTest.php">
-    <MixedArgument>
-      <code>$value</code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code>$value</code>
-      <code>$value</code>
-    </MixedAssignment>
-    <MixedInferredReturnType>
-      <code>\Generator</code>
-      <code>\Generator</code>
-      <code>\Generator</code>
-    </MixedInferredReturnType>
-  </file>
   <file src="test/Unit/RangeTest.php">
-    <MixedInferredReturnType>
-      <code>\Generator</code>
-    </MixedInferredReturnType>
+    <InvalidReturnType>
+      <code>\Generator&lt;string, array{0: \DateTimeZone}&gt;</code>
+    </InvalidReturnType>
   </file>
   <file src="test/Unit/TemplateTest.php">
     <InvalidArgument>
@@ -38,28 +24,5 @@
     <MixedArgumentTypeCoercion>
       <code>$replacements</code>
     </MixedArgumentTypeCoercion>
-    <MixedInferredReturnType>
-      <code>\Generator</code>
-    </MixedInferredReturnType>
-  </file>
-  <file src="test/Unit/UrlTest.php">
-    <MixedArgument>
-      <code>$value</code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code>$value</code>
-      <code>$value</code>
-    </MixedAssignment>
-    <MixedInferredReturnType>
-      <code>\Generator</code>
-      <code>\Generator</code>
-      <code>\Generator</code>
-    </MixedInferredReturnType>
-  </file>
-  <file src="test/Unit/YearTest.php">
-    <MixedInferredReturnType>
-      <code>\Generator</code>
-      <code>\Generator</code>
-    </MixedInferredReturnType>
   </file>
 </files>

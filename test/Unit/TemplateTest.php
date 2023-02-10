@@ -139,6 +139,9 @@ EOF;
         $template->toString($replacements);
     }
 
+    /**
+     * @return \Generator<string, array{0: array<string, mixed>}>
+     */
     public static function provideReplacementsWithInvalidValues(): \Generator
     {
         $faker = self::faker();

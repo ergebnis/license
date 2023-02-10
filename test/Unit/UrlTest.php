@@ -39,6 +39,9 @@ final class UrlTest extends Framework\TestCase
         Url::fromString($value);
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideInvalidValue(): \Generator
     {
         $values = [
@@ -64,6 +67,9 @@ final class UrlTest extends Framework\TestCase
         self::assertSame($value, $url->toString());
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideValidValue(): \Generator
     {
         foreach (self::validValues() as $key => $value) {
@@ -83,6 +89,9 @@ final class UrlTest extends Framework\TestCase
         self::assertSame(\trim($value), $url->toString());
     }
 
+    /**
+     * @return \Generator<string, array{0: string}>
+     */
     public static function provideUntrimmedValue(): \Generator
     {
         foreach (self::validValues() as $key => $value) {
@@ -95,6 +104,9 @@ final class UrlTest extends Framework\TestCase
         }
     }
 
+    /**
+     * @return array<string, string>
+     */
     private static function validValues(): array
     {
         return [
