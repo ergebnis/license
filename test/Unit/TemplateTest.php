@@ -112,34 +112,19 @@ EOF;
         ]));
     }
 
-    /**
-     * @dataProvider provideReplacementsWithInvalidKeys
-     */
-    public function testToStringRejectsReplacementsWithInvalidKeys(array $replacements): void
+    public function testToStringRejectsReplacementsWithInvalidKeys(): void
     {
+        $faker = self::faker();
+
+        $replacements = [
+            $faker->numberBetween(1) => $faker->word(),
+        ];
+
         $template = Template::fromString('');
 
         $this->expectException(Exception\InvalidReplacements::class);
 
         $template->toString($replacements);
-    }
-
-    public static function provideReplacementsWithInvalidKeys(): \Generator
-    {
-        $faker = self::faker();
-
-        $values = [
-            'float' => $faker->randomFloat(2, 1),
-            'int' => $faker->numberBetween(1),
-        ];
-
-        foreach ($values as $key => $value) {
-            yield $key => [
-                [
-                    $value => 'foo',
-                ],
-            ];
-        }
     }
 
     /**

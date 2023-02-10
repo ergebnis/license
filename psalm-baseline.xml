@@ -32,17 +32,13 @@
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/TemplateTest.php">
-    <InvalidArrayOffset>
-      <code>[
-                    $value =&gt; 'foo',
-                ]</code>
-    </InvalidArrayOffset>
-    <MixedArgumentTypeCoercion>
+    <InvalidArgument>
       <code>$replacements</code>
+    </InvalidArgument>
+    <MixedArgumentTypeCoercion>
       <code>$replacements</code>
     </MixedArgumentTypeCoercion>
     <MixedInferredReturnType>
-      <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
