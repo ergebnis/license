@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.30.0@d0bc6e25d89f649e4f36a534f330f8bb4643dd69">
+<files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
   <file src="src/Template.php">
-    <DocblockTypeContradiction occurrences="2">
+    <DocblockTypeContradiction>
       <code>return !\is_string($key);</code>
       <code>return !\is_string($value);</code>
     </DocblockTypeContradiction>
   </file>
   <file src="test/Unit/Exception/InvalidFileTest.php">
-    <MixedArgument occurrences="2">
+    <MixedArgument>
       <code>$faker-&gt;fileExtension()</code>
       <code>$faker-&gt;fileExtension()</code>
     </MixedArgument>
   </file>
   <file src="test/Unit/HolderTest.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$value</code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
+    <MixedAssignment>
       <code>$value</code>
       <code>$value</code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="3">
+    <MixedInferredReturnType>
       <code>\Generator</code>
       <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/RangeTest.php">
-    <MixedInferredReturnType occurrences="1">
+    <MixedInferredReturnType>
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/TemplateTest.php">
-    <InvalidArrayOffset occurrences="1"/>
-    <MixedArgumentTypeCoercion occurrences="2">
+    <InvalidArrayOffset>
+      <code>[
+                    $value =&gt; 'foo',
+                ]</code>
+    </InvalidArrayOffset>
+    <MixedArgumentTypeCoercion>
       <code>$replacements</code>
       <code>$replacements</code>
     </MixedArgumentTypeCoercion>
-    <MixedInferredReturnType occurrences="2">
+    <MixedInferredReturnType>
       <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/UrlTest.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$value</code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
+    <MixedAssignment>
       <code>$value</code>
       <code>$value</code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="3">
+    <MixedInferredReturnType>
       <code>\Generator</code>
       <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
   </file>
   <file src="test/Unit/YearTest.php">
-    <MixedInferredReturnType occurrences="2">
+    <MixedInferredReturnType>
       <code>\Generator</code>
       <code>\Generator</code>
     </MixedInferredReturnType>
