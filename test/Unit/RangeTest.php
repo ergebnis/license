@@ -150,7 +150,7 @@ final class RangeTest extends Framework\TestCase
         self::assertSame($expected, $range->toString());
     }
 
-    public function provideTimeZone(): \Generator
+    public static function provideTimeZone(): \Generator
     {
         $values = [
             'America/New_York',

@@ -124,7 +124,7 @@ EOF;
         $template->toString($replacements);
     }
 
-    public function provideReplacementsWithInvalidKeys(): \Generator
+    public static function provideReplacementsWithInvalidKeys(): \Generator
     {
         $faker = self::faker();
 
@@ -154,7 +154,7 @@ EOF;
         $template->toString($replacements);
     }
 
-    public function provideReplacementsWithInvalidValues(): \Generator
+    public static function provideReplacementsWithInvalidValues(): \Generator
     {
         $faker = self::faker();
 
