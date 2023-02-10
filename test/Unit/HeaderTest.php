@@ -53,13 +53,13 @@ final class HeaderTest extends Framework\TestCase
             \sprintf(
                 '%s/%s.txt',
                 __DIR__,
-                $faker->slug,
+                $faker->slug(),
             ),
             Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt'),
             $range,
             $holder,
         );
-        $url = Url::fromString($faker->url);
+        $url = Url::fromString($faker->url());
 
         $header = Header::createWithReferenceToLicenseFile(
             $template,
@@ -89,7 +89,7 @@ final class HeaderTest extends Framework\TestCase
             new \DateTimeZone($faker->timezone()),
         );
         $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url);
+        $url = Url::fromString($faker->url());
 
         $header = Header::createWithoutReferenceToLicenseFile(
             $template,

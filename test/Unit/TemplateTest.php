@@ -34,7 +34,7 @@ final class TemplateTest extends Framework\TestCase
     {
         $faker = self::faker();
 
-        $when = $faker->dateTime->format('Y');
+        $when = $faker->dateTime()->format('Y');
         $who = $faker->name();
 
         $template = Template::fromString(
@@ -92,7 +92,7 @@ EOF;
     {
         $faker = self::faker();
 
-        $when = $faker->dateTime->format('Y');
+        $when = $faker->dateTime()->format('Y');
         $who = $faker->name();
 
         $template = Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
