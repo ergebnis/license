@@ -2,7 +2,6 @@
 
 [![Integrate](https://github.com/ergebnis/license/workflows/Integrate/badge.svg)](https://github.com/ergebnis/license/actions)
 [![Merge](https://github.com/ergebnis/license/workflows/Merge/badge.svg)](https://github.com/ergebnis/license/actions)
-[![Prune](https://github.com/ergebnis/license/workflows/Prune/badge.svg)](https://github.com/ergebnis/license/actions)
 [![Release](https://github.com/ergebnis/license/workflows/Release/badge.svg)](https://github.com/ergebnis/license/actions)
 [![Renew](https://github.com/ergebnis/license/workflows/Renew/badge.svg)](https://github.com/ergebnis/license/actions)
 
@@ -11,6 +10,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/license/v/stable)](https://packagist.org/packages/ergebnis/license)
 [![Total Downloads](https://poser.pugx.org/ergebnis/license/downloads)](https://packagist.org/packages/ergebnis/license)
+[![Monthly Downloads](http://poser.pugx.org/ergebnis/license/d/monthly)](https://packagist.org/packages/ergebnis/license)
 
 Provides an abstraction of an open-source license.
 
@@ -19,7 +19,7 @@ Provides an abstraction of an open-source license.
 Run
 
 ```sh
-$ composer require --dev ergebnis/license
+composer require --dev ergebnis/license
 ```
 
 ## Usage
@@ -216,6 +216,6 @@ This package is licensed using the MIT License.
 
 Please have a look at [`LICENSE.md`](LICENSE.md).
 
-## Curious what I am building?
+## Curious what I am up to?
 
-:mailbox_with_mail: [Subscribe to my list](https://localheinz.com/projects/), and I will occasionally send you an email to let you know what I am working on.
+Follow me on [Twitter](https://twitter.com/intent/follow?screen_name=localheinz)!
