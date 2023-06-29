@@ -15,24 +15,13 @@ namespace Ergebnis\License;
 
 final class Header
 {
-    private readonly Template $template;
-    private readonly Period $period;
-    private readonly Holder $holder;
-    private readonly ?File $file;
-    private readonly Url $url;
-
     private function __construct(
-        Template $template,
-        Period $period,
-        Holder $holder,
-        ?File $file,
-        Url $url,
+        private readonly Template $template,
+        private readonly Period $period,
+        private readonly Holder $holder,
+        private readonly ?File $file,
+        private readonly Url $url,
     ) {
-        $this->template = $template;
-        $this->period = $period;
-        $this->holder = $holder;
-        $this->file = $file;
-        $this->url = $url;
     }
 
     public static function createWithReferenceToLicenseFile(
