@@ -22,8 +22,8 @@ use Ergebnis\License\Url;
 
 final class MIT
 {
-    private File $file;
-    private Header $header;
+    private readonly File $file;
+    private readonly Header $header;
 
     private function __construct(
         string $name,

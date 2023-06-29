@@ -13,19 +13,15 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
+use Ergebnis\DataProvider;
 use Ergebnis\License\Exception;
 use Ergebnis\License\Template;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Template
- *
- * @uses \Ergebnis\License\Exception\InvalidFile
- * @uses \Ergebnis\License\Exception\InvalidReplacements
- */
+#[Framework\Attributes\CoversClass(Template::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidFile::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidReplacements::class)]
 final class TemplateTest extends Framework\TestCase
 {
     use Test\Util\Helper;
@@ -63,10 +59,8 @@ EOF;
         ]));
     }
 
-    /**
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
-     */
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
     public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
     {
         $this->expectException(Exception\InvalidFile::class);
@@ -127,9 +121,7 @@ EOF;
         $template->toString($replacements);
     }
 
-    /**
-     * @dataProvider provideReplacementsWithInvalidValues
-     */
+    #[Framework\Attributes\DataProvider('provideReplacementsWithInvalidValues')]
     public function testToStringRejectsReplacementsWithInvalidValues(array $replacements): void
     {
         $template = Template::fromString('');

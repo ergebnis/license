@@ -17,11 +17,7 @@ use Ergebnis\License\Exception;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Exception\InvalidUrl
- */
+#[Framework\Attributes\CoversClass(Exception\InvalidUrl::class)]
 final class InvalidUrlTest extends Framework\TestCase
 {
     use Test\Util\Helper;

@@ -18,20 +18,13 @@ use Ergebnis\License\Test;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Year
- *
- * @uses \Ergebnis\License\Exception\InvalidYear
- */
+#[Framework\Attributes\CoversClass(Year::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidYear::class)]
 final class YearTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    /**
-     * @dataProvider provideInvalidValue
-     */
+    #[Framework\Attributes\DataProvider('provideInvalidValue')]
     public function testFromStringRejectsInvalidValue(string $value): void
     {
         $this->expectException(Exception\InvalidYear::class);
@@ -65,9 +58,7 @@ final class YearTest extends Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider provideValidValue
-     */
+    #[Framework\Attributes\DataProvider('provideValidValue')]
     public function testFromStringReturnsYear(string $value): void
     {
         $year = Year::fromString($value);

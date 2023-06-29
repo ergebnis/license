@@ -18,20 +18,13 @@ use Ergebnis\License\Test;
 use Ergebnis\License\Url;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Url
- *
- * @uses \Ergebnis\License\Exception\InvalidUrl
- */
+#[Framework\Attributes\CoversClass(Url::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidUrl::class)]
 final class UrlTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    /**
-     * @dataProvider provideInvalidValue
-     */
+    #[Framework\Attributes\DataProvider('provideInvalidValue')]
     public function testFromStringRejectsInvalidValue(string $value): void
     {
         $this->expectException(Exception\InvalidUrl::class);
@@ -57,9 +50,7 @@ final class UrlTest extends Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider provideValidValue
-     */
+    #[Framework\Attributes\DataProvider('provideValidValue')]
     public function testFromStringReturnsUrl(string $value): void
     {
         $url = Url::fromString($value);
@@ -79,9 +70,7 @@ final class UrlTest extends Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider provideUntrimmedValue
-     */
+    #[Framework\Attributes\DataProvider('provideUntrimmedValue')]
     public function testFromStringReturnsUrlWithTrimmedValue(string $value): void
     {
         $url = Url::fromString($value);

@@ -23,18 +23,13 @@ use Ergebnis\License\Url;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Header
- *
- * @uses \Ergebnis\License\File
- * @uses \Ergebnis\License\Holder
- * @uses \Ergebnis\License\Range
- * @uses \Ergebnis\License\Template
- * @uses \Ergebnis\License\Url
- * @uses \Ergebnis\License\Year
- */
+#[Framework\Attributes\CoversClass(Header::class)]
+#[Framework\Attributes\UsesClass(File::class)]
+#[Framework\Attributes\UsesClass(Holder::class)]
+#[Framework\Attributes\UsesClass(Range::class)]
+#[Framework\Attributes\UsesClass(Template::class)]
+#[Framework\Attributes\UsesClass(Url::class)]
+#[Framework\Attributes\UsesClass(Year::class)]
 final class HeaderTest extends Framework\TestCase
 {
     use Test\Util\Helper;

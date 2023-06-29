@@ -13,8 +13,11 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Type;
 
+use Ergebnis\License\File;
+use Ergebnis\License\Header;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Range;
+use Ergebnis\License\Template;
 use Ergebnis\License\Test;
 use Ergebnis\License\Type;
 use Ergebnis\License\Url;
@@ -22,19 +25,14 @@ use Ergebnis\License\Year;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Type\MIT
- *
- * @uses \Ergebnis\License\File
- * @uses \Ergebnis\License\Header
- * @uses \Ergebnis\License\Holder
- * @uses \Ergebnis\License\Range
- * @uses \Ergebnis\License\Template
- * @uses \Ergebnis\License\Url
- * @uses \Ergebnis\License\Year
- */
+#[Framework\Attributes\CoversClass(Type\MIT::class)]
+#[Framework\Attributes\UsesClass(File::class)]
+#[Framework\Attributes\UsesClass(Header::class)]
+#[Framework\Attributes\UsesClass(Holder::class)]
+#[Framework\Attributes\UsesClass(Range::class)]
+#[Framework\Attributes\UsesClass(Template::class)]
+#[Framework\Attributes\UsesClass(Url::class)]
+#[Framework\Attributes\UsesClass(Year::class)]
 final class MITTest extends Framework\TestCase
 {
     use Test\Util\Helper;
