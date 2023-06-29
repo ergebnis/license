@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
+use Ergebnis\DataProvider;
 use Ergebnis\License\Exception;
 use Ergebnis\License\File;
 use Ergebnis\License\Holder;
@@ -23,17 +24,12 @@ use Ergebnis\License\Year;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\File
- *
- * @uses \Ergebnis\License\Exception\InvalidFile
- * @uses \Ergebnis\License\Holder
- * @uses \Ergebnis\License\Range
- * @uses \Ergebnis\License\Template
- * @uses \Ergebnis\License\Year
- */
+#[Framework\Attributes\CoversClass(File::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidFile::class)]
+#[Framework\Attributes\UsesClass(Holder::class)]
+#[Framework\Attributes\UsesClass(Range::class)]
+#[Framework\Attributes\UsesClass(Template::class)]
+#[Framework\Attributes\UsesClass(Year::class)]
 final class FileTest extends Framework\TestCase
 {
     use Test\Util\Helper;
@@ -52,10 +48,8 @@ final class FileTest extends Framework\TestCase
         $filesystem->remove(self::temporaryDirectory());
     }
 
-    /**
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
-     */
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
     public function testCreateRejectsBlankOrEmptyName(string $name): void
     {
         $faker = self::faker();

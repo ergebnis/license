@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
+<files psalm-version="5.13.1@086b94371304750d1c673315321a55d15fc59015">
   <file src="src/Template.php">
     <DocblockTypeContradiction>
       <code>return !\is_string($key);</code>
@@ -8,14 +8,24 @@
   </file>
   <file src="test/Unit/Exception/InvalidFileTest.php">
     <MixedArgument>
-      <code>$faker-&gt;fileExtension()</code>
-      <code>$faker-&gt;fileExtension()</code>
+      <code><![CDATA[$faker->fileExtension()]]></code>
+      <code><![CDATA[$faker->fileExtension()]]></code>
     </MixedArgument>
+  </file>
+  <file src="test/Unit/HolderTest.php">
+    <PossiblyUnusedMethod>
+      <code>provideMultilineValue</code>
+      <code>provideUntrimmedValue</code>
+      <code>provideValidValue</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="test/Unit/RangeTest.php">
     <InvalidReturnType>
-      <code>\Generator&lt;string, array{0: \DateTimeZone}&gt;</code>
+      <code><![CDATA[\Generator<string, array{0: \DateTimeZone}>]]></code>
     </InvalidReturnType>
+    <PossiblyUnusedMethod>
+      <code>provideTimeZone</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="test/Unit/TemplateTest.php">
     <InvalidArgument>
@@ -24,5 +34,21 @@
     <MixedArgumentTypeCoercion>
       <code>$replacements</code>
     </MixedArgumentTypeCoercion>
+    <PossiblyUnusedMethod>
+      <code>provideReplacementsWithInvalidValues</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/Unit/UrlTest.php">
+    <PossiblyUnusedMethod>
+      <code>provideInvalidValue</code>
+      <code>provideUntrimmedValue</code>
+      <code>provideValidValue</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="test/Unit/YearTest.php">
+    <PossiblyUnusedMethod>
+      <code>provideInvalidValue</code>
+      <code>provideValidValue</code>
+    </PossiblyUnusedMethod>
   </file>
 </files>

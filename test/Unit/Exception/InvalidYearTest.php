@@ -17,11 +17,7 @@ use Ergebnis\License\Exception;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Exception\InvalidYear
- */
+#[Framework\Attributes\CoversClass(Exception\InvalidYear::class)]
 final class InvalidYearTest extends Framework\TestCase
 {
     use Test\Util\Helper;

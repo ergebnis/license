@@ -13,26 +13,20 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
+use Ergebnis\DataProvider;
 use Ergebnis\License\Exception;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-/**
- * @internal
- *
- * @covers \Ergebnis\License\Holder
- *
- * @uses \Ergebnis\License\Exception\InvalidHolder
- */
+#[Framework\Attributes\CoversClass(Holder::class)]
+#[Framework\Attributes\UsesClass(Exception\InvalidHolder::class)]
 final class HolderTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    /**
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank()
-     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
-     */
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
+    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
     public function testFromStringRejectsBlankOrEmptyValue(string $value): void
     {
         $this->expectException(Exception\InvalidHolder::class);
@@ -40,9 +34,7 @@ final class HolderTest extends Framework\TestCase
         Holder::fromString($value);
     }
 
-    /**
-     * @dataProvider provideMultilineValue
-     */
+    #[Framework\Attributes\DataProvider('provideMultilineValue')]
     public function testFromStringRejectsMultilineValue(string $value): void
     {
         $this->expectException(Exception\InvalidHolder::class);
@@ -83,9 +75,7 @@ final class HolderTest extends Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider provideValidValue
-     */
+    #[Framework\Attributes\DataProvider('provideValidValue')]
     public function testFromStringReturnsHolder(string $value): void
     {
         $holder = Holder::fromString($value);
@@ -105,9 +95,7 @@ final class HolderTest extends Framework\TestCase
         }
     }
 
-    /**
-     * @dataProvider provideUntrimmedValue
-     */
+    #[Framework\Attributes\DataProvider('provideUntrimmedValue')]
     public function testFromStringReturnsHolderWithTrimmedValue(string $value): void
     {
         $holder = Holder::fromString($value);
