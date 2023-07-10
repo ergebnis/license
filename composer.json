@@ -22,7 +22,7 @@
     "ext-filter": "*"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.32.0",
+    "ergebnis/composer-normalize": "^2.33.0",
     "ergebnis/data-provider": "^2.0.0",
     "ergebnis/php-cs-fixer-config": "^5.11.0",
     "ergebnis/phpunit-slow-test-detector": "^2.3.0",
