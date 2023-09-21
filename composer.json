@@ -16,7 +16,8 @@
   "homepage": "https://github.com/ergebnis/license",
   "support": {
     "issues": "https://github.com/ergebnis/license/issues",
-    "source": "https://github.com/ergebnis/license"
+    "source": "https://github.com/ergebnis/license",
+    "security": "https://github.com/ergebnis/license/blob/main/.github/SECURITY.md"
   },
   "require": {
     "php": "~8.1.0 || ~8.2.0",
