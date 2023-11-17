@@ -193,6 +193,7 @@ Note that pull requests opened or commits pushed by GitHub Actions will not trig
 
 The following license types are currently available:
 
+- [`Ergebnis\License\Type\MIT`](src/Type/BSD3Clause.php)
 - [`Ergebnis\License\Type\MIT`](src/Type/MIT.php)
 - [`Ergebnis\License\Type\None`](src/Type/None.php)
 
