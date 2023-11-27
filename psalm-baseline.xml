@@ -55,6 +55,14 @@
       <code>provideReplacementsWithInvalidValues</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="test/Unit/Type/BSD3ClauseTest.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+    </ArgumentTypeCoercion>
+  </file>
   <file src="test/Unit/Type/MITTest.php">
     <ArgumentTypeCoercion>
       <code><![CDATA[$faker->timezone()]]></code>

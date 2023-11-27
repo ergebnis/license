@@ -11,6 +11,7 @@ For a full diff see [`2.2.0...main`][2.2.0...main].
 ## Added
 
 - Added support for PHP 8.3 ([#734]), by [@localheinz]
+- Added `BSD3Clause` ([#740]), by [@oruborus]
 
 ## [`2.2.0`][2.2.0]
 
@@ -121,5 +122,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#550]: https://github.com/ergebnis/license/pull/550
 [#644]: https://github.com/ergebnis/license/pull/644
 [#734]: https://github.com/ergebnis/license/pull/734
+[#740]: https://github.com/ergebnis/license/pull/740
 
 [@localheinz]: https://github.com/localheinz
+[@oruborus]: https://github.com/oruborus
