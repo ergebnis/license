@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352">
+<files psalm-version="5.16.0@2897ba636551a8cb61601cc26f6ccfbba6c36591">
   <file src="src/Template.php">
     <DocblockTypeContradiction>
       <code>return !\is_string($key);</code>
       <code>return !\is_string($value);</code>
     </DocblockTypeContradiction>
+    <TypeDoesNotContainType>
+      <code>[] !== $invalidKeys</code>
+      <code>[] !== $invalidValues</code>
+    </TypeDoesNotContainType>
   </file>
   <file src="test/Unit/Exception/InvalidFileTest.php">
     <MixedArgument>
       <code><![CDATA[$faker->fileExtension()]]></code>
       <code><![CDATA[$faker->fileExtension()]]></code>
     </MixedArgument>
+  </file>
+  <file src="test/Unit/FileTest.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+    </ArgumentTypeCoercion>
+  </file>
+  <file src="test/Unit/HeaderTest.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+    </ArgumentTypeCoercion>
   </file>
   <file src="test/Unit/HolderTest.php">
     <PossiblyUnusedMethod>
@@ -37,6 +54,19 @@
     <PossiblyUnusedMethod>
       <code>provideReplacementsWithInvalidValues</code>
     </PossiblyUnusedMethod>
+  </file>
+  <file src="test/Unit/Type/MITTest.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+      <code><![CDATA[$faker->timezone()]]></code>
+    </ArgumentTypeCoercion>
+  </file>
+  <file src="test/Unit/Type/NoneTest.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$faker->timezone()]]></code>
+    </ArgumentTypeCoercion>
   </file>
   <file src="test/Unit/UrlTest.php">
     <PossiblyUnusedMethod>
