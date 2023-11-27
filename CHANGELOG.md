@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`2.2.0...main`][2.2.0...main].
 
+## Added
+
+- Added support for PHP 8.3 ([#734]), by [@localheinz]
+
 ## [`2.2.0`][2.2.0]
 
 For a full diff see [`2.1.0...2.2.0`][2.1.0...2.2.0].
@@ -116,5 +120,6 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#534]: https://github.com/ergebnis/license/pull/534
 [#550]: https://github.com/ergebnis/license/pull/550
 [#644]: https://github.com/ergebnis/license/pull/644
+[#734]: https://github.com/ergebnis/license/pull/734
 
 [@localheinz]: https://github.com/localheinz
