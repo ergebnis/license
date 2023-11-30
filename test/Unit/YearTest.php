@@ -18,13 +18,18 @@ use Ergebnis\License\Test;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Year::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidYear::class)]
+/**
+ * @covers \Ergebnis\License\Year
+ *
+ * @uses \Ergebnis\License\Exception\InvalidYear
+ */
 final class YearTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    #[Framework\Attributes\DataProvider('provideInvalidValue')]
+    /**
+     * @dataProvider provideInvalidValue
+     */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
         $this->expectException(Exception\InvalidYear::class);
@@ -35,7 +40,7 @@ final class YearTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideInvalidValue(): \Generator
+    public static function provideInvalidValue(): iterable
     {
         $faker = self::faker();
 
@@ -58,7 +63,9 @@ final class YearTest extends Framework\TestCase
         }
     }
 
-    #[Framework\Attributes\DataProvider('provideValidValue')]
+    /**
+     * @dataProvider provideValidValue
+     */
     public function testFromStringReturnsYear(string $value): void
     {
         $year = Year::fromString($value);
@@ -69,7 +76,7 @@ final class YearTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideValidValue(): \Generator
+    public static function provideValidValue(): iterable
     {
         $values = [
             'string-end' => '0000',

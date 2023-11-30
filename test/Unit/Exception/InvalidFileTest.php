@@ -15,11 +15,13 @@ namespace Ergebnis\License\Test\Unit\Exception;
 
 use Ergebnis\License\Exception;
 use Ergebnis\License\Test;
-use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidFile::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\Exception\InvalidFile
+ *
+ * @uses \Ergebnis\License\Year
+ */
 final class InvalidFileTest extends Framework\TestCase
 {
     use Test\Util\Helper;

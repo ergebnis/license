@@ -15,7 +15,7 @@ namespace Ergebnis\License;
 
 final class Range implements Period
 {
-    private function __construct(private readonly string $value)
+    private function __construct(private string $value)
     {
     }
 

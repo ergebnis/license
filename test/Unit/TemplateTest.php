@@ -19,9 +19,12 @@ use Ergebnis\License\Template;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Template::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidFile::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidReplacements::class)]
+/**
+ * @covers \Ergebnis\License\Template
+ *
+ * @uses \Ergebnis\License\Exception\InvalidFile
+ * @uses \Ergebnis\License\Exception\InvalidReplacements
+ */
 final class TemplateTest extends Framework\TestCase
 {
     use Test\Util\Helper;
@@ -59,8 +62,10 @@ EOF;
         ]));
     }
 
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
+     */
     public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
     {
         $this->expectException(Exception\InvalidFile::class);
@@ -121,7 +126,9 @@ EOF;
         $template->toString($replacements);
     }
 
-    #[Framework\Attributes\DataProvider('provideReplacementsWithInvalidValues')]
+    /**
+     * @dataProvider provideReplacementsWithInvalidValues
+     */
     public function testToStringRejectsReplacementsWithInvalidValues(array $replacements): void
     {
         $template = Template::fromString('');
@@ -134,7 +141,7 @@ EOF;
     /**
      * @return \Generator<string, array{0: array<string, mixed>}>
      */
-    public static function provideReplacementsWithInvalidValues(): \Generator
+    public static function provideReplacementsWithInvalidValues(): iterable
     {
         $faker = self::faker();
 

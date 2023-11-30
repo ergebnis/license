@@ -13,23 +13,25 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Type;
 
-use Ergebnis\License\Header;
 use Ergebnis\License\Holder;
 use Ergebnis\License\Range;
-use Ergebnis\License\Template;
 use Ergebnis\License\Test;
 use Ergebnis\License\Type;
 use Ergebnis\License\Url;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Type\None::class)]
-#[Framework\Attributes\UsesClass(Header::class)]
-#[Framework\Attributes\UsesClass(Holder::class)]
-#[Framework\Attributes\UsesClass(Range::class)]
-#[Framework\Attributes\UsesClass(Template::class)]
-#[Framework\Attributes\UsesClass(Url::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\Type\None
+ *
+ * @uses \Ergebnis\License\File
+ * @uses \Ergebnis\License\Header
+ * @uses \Ergebnis\License\Holder
+ * @uses \Ergebnis\License\Range
+ * @uses \Ergebnis\License\Template
+ * @uses \Ergebnis\License\Url
+ * @uses \Ergebnis\License\Year
+ */
 final class NoneTest extends Framework\TestCase
 {
     use Test\Util\Helper;

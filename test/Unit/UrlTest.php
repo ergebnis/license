@@ -18,13 +18,18 @@ use Ergebnis\License\Test;
 use Ergebnis\License\Url;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Url::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidUrl::class)]
+/**
+ * @covers \Ergebnis\License\Url
+ *
+ * @uses \Ergebnis\License\Exception\InvalidUrl
+ */
 final class UrlTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    #[Framework\Attributes\DataProvider('provideInvalidValue')]
+    /**
+     * @dataProvider provideInvalidValue
+     */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
         $this->expectException(Exception\InvalidUrl::class);
@@ -35,7 +40,7 @@ final class UrlTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideInvalidValue(): \Generator
+    public static function provideInvalidValue(): iterable
     {
         $values = [
             'string-arbitrary' => self::faker()->sentence(),
@@ -50,7 +55,9 @@ final class UrlTest extends Framework\TestCase
         }
     }
 
-    #[Framework\Attributes\DataProvider('provideValidValue')]
+    /**
+     * @dataProvider provideValidValue
+     */
     public function testFromStringReturnsUrl(string $value): void
     {
         $url = Url::fromString($value);
@@ -61,7 +68,7 @@ final class UrlTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideValidValue(): \Generator
+    public static function provideValidValue(): iterable
     {
         foreach (self::validValues() as $key => $value) {
             yield $key => [
@@ -70,7 +77,9 @@ final class UrlTest extends Framework\TestCase
         }
     }
 
-    #[Framework\Attributes\DataProvider('provideUntrimmedValue')]
+    /**
+     * @dataProvider provideUntrimmedValue
+     */
     public function testFromStringReturnsUrlWithTrimmedValue(string $value): void
     {
         $url = Url::fromString($value);
@@ -81,7 +90,7 @@ final class UrlTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideUntrimmedValue(): \Generator
+    public static function provideUntrimmedValue(): iterable
     {
         foreach (self::validValues() as $key => $value) {
             yield $key => [
