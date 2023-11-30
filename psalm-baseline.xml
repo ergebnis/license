@@ -29,20 +29,10 @@
       <code><![CDATA[$faker->timezone()]]></code>
     </ArgumentTypeCoercion>
   </file>
-  <file src="test/Unit/HolderTest.php">
-    <PossiblyUnusedMethod>
-      <code>provideMultilineValue</code>
-      <code>provideUntrimmedValue</code>
-      <code>provideValidValue</code>
-    </PossiblyUnusedMethod>
-  </file>
   <file src="test/Unit/RangeTest.php">
     <InvalidReturnType>
       <code><![CDATA[\Generator<string, array{0: \DateTimeZone}>]]></code>
     </InvalidReturnType>
-    <PossiblyUnusedMethod>
-      <code>provideTimeZone</code>
-    </PossiblyUnusedMethod>
   </file>
   <file src="test/Unit/TemplateTest.php">
     <InvalidArgument>
@@ -51,9 +41,6 @@
     <MixedArgumentTypeCoercion>
       <code>$replacements</code>
     </MixedArgumentTypeCoercion>
-    <PossiblyUnusedMethod>
-      <code>provideReplacementsWithInvalidValues</code>
-    </PossiblyUnusedMethod>
   </file>
   <file src="test/Unit/Type/BSD3ClauseTest.php">
     <ArgumentTypeCoercion>
@@ -75,18 +62,5 @@
     <ArgumentTypeCoercion>
       <code><![CDATA[$faker->timezone()]]></code>
     </ArgumentTypeCoercion>
-  </file>
-  <file src="test/Unit/UrlTest.php">
-    <PossiblyUnusedMethod>
-      <code>provideInvalidValue</code>
-      <code>provideUntrimmedValue</code>
-      <code>provideValidValue</code>
-    </PossiblyUnusedMethod>
-  </file>
-  <file src="test/Unit/YearTest.php">
-    <PossiblyUnusedMethod>
-      <code>provideInvalidValue</code>
-      <code>provideValidValue</code>
-    </PossiblyUnusedMethod>
   </file>
 </files>

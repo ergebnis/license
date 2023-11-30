@@ -14,11 +14,13 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit\Exception;
 
 use Ergebnis\License\Exception;
-use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidReplacements::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\Exception\InvalidReplacements
+ *
+ * @uses \Ergebnis\License\Year
+ */
 final class InvalidReplacementsTest extends Framework\TestCase
 {
     public function testKeysReturnsInvalidReplacements(): void

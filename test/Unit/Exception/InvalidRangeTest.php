@@ -17,8 +17,11 @@ use Ergebnis\License\Exception;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidRange::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\Exception\InvalidRange
+ *
+ * @uses \Ergebnis\License\Year
+ */
 final class InvalidRangeTest extends Framework\TestCase
 {
     public function testStartYearGreaterThanEndYearReturnsInvalidRange(): void

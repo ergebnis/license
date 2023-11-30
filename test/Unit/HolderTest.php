@@ -19,14 +19,18 @@ use Ergebnis\License\Holder;
 use Ergebnis\License\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Holder::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidHolder::class)]
+/**
+ * @covers \Ergebnis\License\Exception\InvalidHolder
+ * @covers \Ergebnis\License\Holder
+ */
 final class HolderTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty
+     */
     public function testFromStringRejectsBlankOrEmptyValue(string $value): void
     {
         $this->expectException(Exception\InvalidHolder::class);
@@ -34,7 +38,9 @@ final class HolderTest extends Framework\TestCase
         Holder::fromString($value);
     }
 
-    #[Framework\Attributes\DataProvider('provideMultilineValue')]
+    /**
+     * @dataProvider provideMultilineValue
+     */
     public function testFromStringRejectsMultilineValue(string $value): void
     {
         $this->expectException(Exception\InvalidHolder::class);
@@ -45,7 +51,7 @@ final class HolderTest extends Framework\TestCase
     /**
      * @return \Generator<int, array{0: string}>
      */
-    public static function provideMultilineValue(): \Generator
+    public static function provideMultilineValue(): iterable
     {
         $newLineCharacters = [
             "\n",
@@ -75,7 +81,9 @@ final class HolderTest extends Framework\TestCase
         }
     }
 
-    #[Framework\Attributes\DataProvider('provideValidValue')]
+    /**
+     * @dataProvider provideValidValue
+     */
     public function testFromStringReturnsHolder(string $value): void
     {
         $holder = Holder::fromString($value);
@@ -86,7 +94,7 @@ final class HolderTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideValidValue(): \Generator
+    public static function provideValidValue(): iterable
     {
         foreach (self::validValues() as $key => $value) {
             yield $key => [
@@ -95,7 +103,9 @@ final class HolderTest extends Framework\TestCase
         }
     }
 
-    #[Framework\Attributes\DataProvider('provideUntrimmedValue')]
+    /**
+     * @dataProvider provideUntrimmedValue
+     */
     public function testFromStringReturnsHolderWithTrimmedValue(string $value): void
     {
         $holder = Holder::fromString($value);
@@ -106,7 +116,7 @@ final class HolderTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public static function provideUntrimmedValue(): \Generator
+    public static function provideUntrimmedValue(): iterable
     {
         foreach (self::validValues() as $key => $value) {
             yield $key => [

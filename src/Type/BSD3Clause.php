@@ -22,8 +22,8 @@ use Ergebnis\License\Url;
 
 final class BSD3Clause
 {
-    private readonly File $file;
-    private readonly Header $header;
+    private File $file;
+    private Header $header;
 
     private function __construct(
         string $name,

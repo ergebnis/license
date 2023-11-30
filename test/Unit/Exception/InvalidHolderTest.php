@@ -16,7 +16,9 @@ namespace Ergebnis\License\Test\Unit\Exception;
 use Ergebnis\License\Exception;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidHolder::class)]
+/**
+ * @covers \Ergebnis\License\Exception\InvalidHolder
+ */
 final class InvalidHolderTest extends Framework\TestCase
 {
     public function testBlankOrEmptyReturnsInvalidHolder(): void

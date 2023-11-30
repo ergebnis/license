@@ -21,7 +21,7 @@ use Ergebnis\License\Url;
 
 final class None
 {
-    private readonly Header $header;
+    private Header $header;
 
     private function __construct(
         Template $headerTemplate,

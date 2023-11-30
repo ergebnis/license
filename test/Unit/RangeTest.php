@@ -18,10 +18,13 @@ use Ergebnis\License\Range;
 use Ergebnis\License\Year;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Range::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidRange::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidYear::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\Range
+ *
+ * @uses \Ergebnis\License\Exception\InvalidRange
+ * @uses \Ergebnis\License\Exception\InvalidYear
+ * @uses \Ergebnis\License\Year
+ */
 final class RangeTest extends Framework\TestCase
 {
     public function testIncludingRequiresStartYearToBeEqualOrLessThanEndYear(): void
@@ -71,7 +74,9 @@ final class RangeTest extends Framework\TestCase
         self::assertSame($expected, $years->toString());
     }
 
-    #[Framework\Attributes\DataProvider('provideTimeZone')]
+    /**
+     * @dataProvider provideTimeZone
+     */
     public function testSinceRejectsStartYearWhenStartYearIsGreaterThanCurrentYear(\DateTimeZone $timeZone): void
     {
         $now = new \DateTimeImmutable(
@@ -89,7 +94,9 @@ final class RangeTest extends Framework\TestCase
         );
     }
 
-    #[Framework\Attributes\DataProvider('provideTimeZone')]
+    /**
+     * @dataProvider provideTimeZone
+     */
     public function testSinceReturnsYearWhenStartYearEqualsCurrentYear(\DateTimeZone $timeZone): void
     {
         $now = new \DateTimeImmutable(
@@ -108,7 +115,9 @@ final class RangeTest extends Framework\TestCase
         self::assertSame($start->toString(), $year->toString());
     }
 
-    #[Framework\Attributes\DataProvider('provideTimeZone')]
+    /**
+     * @dataProvider provideTimeZone
+     */
     public function testSinceReturnsRangeWhenStartYearIsLessThanCurrentYear(\DateTimeZone $timeZone): void
     {
         $twoYearsAgo = new \DateTimeImmutable(
@@ -142,7 +151,7 @@ final class RangeTest extends Framework\TestCase
     /**
      * @return \Generator<string, array{0: \DateTimeZone}>
      */
-    public static function provideTimeZone(): \Generator
+    public static function provideTimeZone(): iterable
     {
         $values = [
             'America/New_York',

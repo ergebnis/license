@@ -24,12 +24,15 @@ use Ergebnis\License\Year;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
-#[Framework\Attributes\CoversClass(File::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidFile::class)]
-#[Framework\Attributes\UsesClass(Holder::class)]
-#[Framework\Attributes\UsesClass(Range::class)]
-#[Framework\Attributes\UsesClass(Template::class)]
-#[Framework\Attributes\UsesClass(Year::class)]
+/**
+ * @covers \Ergebnis\License\File
+ *
+ * @uses \Ergebnis\License\Exception\InvalidFile
+ * @uses \Ergebnis\License\Holder
+ * @uses \Ergebnis\License\Range
+ * @uses \Ergebnis\License\Template
+ * @uses \Ergebnis\License\Year
+ */
 final class FileTest extends Framework\TestCase
 {
     use Test\Util\Helper;
@@ -48,8 +51,10 @@ final class FileTest extends Framework\TestCase
         $filesystem->remove(self::temporaryDirectory());
     }
 
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'blank')]
-    #[Framework\Attributes\DataProviderExternal(DataProvider\StringProvider::class, 'empty')]
+    /**
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::blank
+     * @dataProvider \Ergebnis\DataProvider\StringProvider::empty()
+     */
     public function testCreateRejectsBlankOrEmptyName(string $name): void
     {
         $faker = self::faker();
