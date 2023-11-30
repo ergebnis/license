@@ -15,8 +15,11 @@ namespace Ergebnis\License;
 
 final class Range implements Period
 {
-    private function __construct(private string $value)
+    private string $value;
+
+    private function __construct(string $value)
     {
+        $this->value = $value;
     }
 
     /**
@@ -24,7 +27,7 @@ final class Range implements Period
      */
     public static function including(
         Year $start,
-        Year $end,
+        Year $end
     ): Period {
         if ($start->greaterThan($end)) {
             throw Exception\InvalidRange::startYearGreaterThanEndYear(
@@ -49,7 +52,7 @@ final class Range implements Period
      */
     public static function since(
         Year $start,
-        \DateTimeZone $timeZone,
+        \DateTimeZone $timeZone
     ): Period {
         $now = new \DateTimeImmutable(
             'now',

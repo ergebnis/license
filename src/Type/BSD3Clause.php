@@ -31,7 +31,7 @@ final class BSD3Clause
         Template $headerTemplate,
         Period $period,
         Holder $holder,
-        Url $url,
+        Url $url
     ) {
         $file = File::create(
             $name,
@@ -56,7 +56,7 @@ final class BSD3Clause
         string $name,
         Period $period,
         Holder $holder,
-        Url $url,
+        Url $url
     ): self {
         return new self(
             $name,
@@ -72,7 +72,7 @@ final class BSD3Clause
         string $name,
         Period $period,
         Holder $holder,
-        Url $url,
+        Url $url
     ): self {
         return new self(
             $name,

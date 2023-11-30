@@ -15,8 +15,11 @@ namespace Ergebnis\License;
 
 final class Year implements Period
 {
-    private function __construct(private string $value)
+    private string $value;
+
+    private function __construct(string $value)
     {
+        $this->value = $value;
     }
 
     /**
