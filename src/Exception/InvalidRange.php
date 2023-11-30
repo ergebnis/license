@@ -19,7 +19,7 @@ final class InvalidRange extends \InvalidArgumentException implements Exception
 {
     public static function startYearGreaterThanEndYear(
         Year $start,
-        Year $end,
+        Year $end
     ): self {
         return new self(\sprintf(
             'Start year "%s" can not be greater than end year "%s".',
@@ -30,7 +30,7 @@ final class InvalidRange extends \InvalidArgumentException implements Exception
 
     public static function startYearGreaterThanCurrentYear(
         Year $start,
-        Year $current,
+        Year $current
     ): self {
         return new self(\sprintf(
             'Start year "%s" can not be greater than current year "%s".',

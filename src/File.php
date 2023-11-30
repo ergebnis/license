@@ -15,12 +15,21 @@ namespace Ergebnis\License;
 
 final class File
 {
+    private Holder $holder;
+    private Period $period;
+    private Template $template;
+    private string $name;
+
     private function __construct(
-        private string $name,
-        private Template $template,
-        private Period $period,
-        private Holder $holder,
+        string $name,
+        Template $template,
+        Period $period,
+        Holder $holder
     ) {
+        $this->name = $name;
+        $this->template = $template;
+        $this->period = $period;
+        $this->holder = $holder;
     }
 
     /**
@@ -30,7 +39,7 @@ final class File
         string $name,
         Template $template,
         Period $period,
-        Holder $holder,
+        Holder $holder
     ): self {
         if ('' === \trim($name)) {
             throw Exception\InvalidFile::emptyFileName();
