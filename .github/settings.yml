@@ -82,7 +82,7 @@ repository:
   archived: false
   default_branch: "main"
   delete_branch_on_merge: true
-  description: ":briefcase: Provides an abstraction of an open-source license."
+  description: "💼 Provides a composer package with an abstraction of an open-source license."
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
   has_discussions: false

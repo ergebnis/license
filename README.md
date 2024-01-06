@@ -59,7 +59,7 @@ $license = License\Type\MIT::text(
     __DIR__ . '/LICENSE',
     License\Range::since(
         License\Year::fromString('2020'),
-        new \DateTimeZone('UTC')
+        new DateTimeZone('UTC')
     ),
     License\Holder::fromString('Andreas Möller'),
     License\Url::fromString('https://github.com/ergebnis/license')
@@ -104,7 +104,7 @@ use PhpCsFixer\Finder;
 $license = License\Type\None::text(
     License\Range::since(
         License\Year::fromString('2020'),
-        new \DateTimeZone('UTC')
+        new DateTimeZone('UTC')
     ),
     License\Holder::fromString('Andreas Möller'),
     License\Url::fromString('https://github.com/localheinz/localheinz.com')
