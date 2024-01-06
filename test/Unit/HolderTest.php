@@ -62,7 +62,7 @@ final class HolderTest extends Framework\TestCase
         foreach ($newLineCharacters as $start) {
             foreach ($newLineCharacters as $middle) {
                 foreach ($newLineCharacters as $end) {
-                    /** @var array<string> $words */
+                    /** @var list<string> $words */
                     $words = self::faker()->words();
 
                     yield [
