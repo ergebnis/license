@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`2.4.0...main`][2.4.0...main].
 
+## Added
+
+- Allowed installation on PHP 8.4 ([#871]), by [@localheinz]
+
 ## [`2.4.0`][2.4.0]
 
 For a full diff see [`2.3.0...2.4.0`][2.3.0...2.4.0].
@@ -141,6 +145,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#740]: https://github.com/ergebnis/license/pull/740
 [#745]: https://github.com/ergebnis/license/pull/745
 [#746]: https://github.com/ergebnis/license/pull/746
+[#871]: https://github.com/ergebnis/license/pull/871
 
 [@localheinz]: https://github.com/localheinz
 [@oruborus]: https://github.com/oruborus
