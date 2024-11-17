@@ -12,7 +12,7 @@ For a full diff see [`2.5.0...main`][2.5.0...main].
 
 For a full diff see [`2.4.0...2.5.0`][2.4.0...2.5.0].
 
-## Added
+## Changed
 
 - Allowed installation on PHP 8.4 ([#871]), by [@localheinz]
 
