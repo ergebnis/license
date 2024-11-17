@@ -121,7 +121,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [2.2.0]: https://github.com/ergebnis/license/releases/tag/2.2.0
 [2.3.0]: https://github.com/ergebnis/license/releases/tag/2.3.0
 [2.4.0]: https://github.com/ergebnis/license/releases/tag/2.4.0
-[2.5.0]: https://github.com/ergebnis/license/releases/tag/2.4.0
+[2.5.0]: https://github.com/ergebnis/license/releases/tag/2.5.0
 
 [675601b...0.1.0]: https://github.com/ergebnis/license/compare/675601b...0.1.0
 [0.1.0...1.0.0]: https://github.com/ergebnis/license/compare/0.1.0...1.0.0
