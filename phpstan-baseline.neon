@@ -1,6 +1,41 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidFile\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidFile.php
+
+		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidHolder\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidHolder.php
+
+		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidRange\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidRange.php
+
+		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidReplacements\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidReplacements.php
+
+		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidUrl\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidUrl.php
+
+		-
+			message: "#^Class \"Ergebnis\\\\License\\\\Exception\\\\InvalidYear\" is not allowed to extend \"InvalidArgumentException\"\\.$#"
+			count: 1
+			path: src/Exception/InvalidYear.php
+
+		-
+			message: "#^Method Ergebnis\\\\License\\\\Header\\:\\:__construct\\(\\) has parameter \\$file with a nullable type declaration\\.$#"
+			count: 1
+			path: src/Header.php
+
+		-
 			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
 			count: 2
 			path: src/Template.php
