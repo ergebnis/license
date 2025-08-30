@@ -168,6 +168,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#746]: https://github.com/ergebnis/license/pull/746
 [#871]: https://github.com/ergebnis/license/pull/871
 [#893]: https://github.com/ergebnis/license/pull/893
+[#944]: https://github.com/ergebnis/license/pull/944
 
 [@localheinz]: https://github.com/localheinz
 [@oruborus]: https://github.com/oruborus
