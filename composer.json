@@ -24,7 +24,7 @@
     "ext-filter": "*"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.47.0",
+    "ergebnis/composer-normalize": "^2.48.2",
     "ergebnis/data-provider": "^3.5.0",
     "ergebnis/php-cs-fixer-config": "^6.53.0",
     "ergebnis/phpstan-rules": "^2.5.2",
