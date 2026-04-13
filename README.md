@@ -1,9 +1,9 @@
 # license
 
-[![Integrate](https://github.com/ergebnis/license/workflows/Integrate/badge.svg)](https://github.com/ergebnis/license/actions)
-[![Merge](https://github.com/ergebnis/license/workflows/Merge/badge.svg)](https://github.com/ergebnis/license/actions)
-[![Release](https://github.com/ergebnis/license/workflows/Release/badge.svg)](https://github.com/ergebnis/license/actions)
-[![Renew](https://github.com/ergebnis/license/workflows/Renew/badge.svg)](https://github.com/ergebnis/license/actions)
+[![Integrate](https://github.com/ergebnis/license/actions/workflows/integrate.yaml/badge.svg?branch=main)](https://github.com/ergebnis/license/actions/workflows/integrate.yaml)
+[![Merge](https://github.com/ergebnis/license/actions/workflows/merge.yaml/badge.svg)](https://github.com/ergebnis/license/actions/workflows/merge.yaml)
+[![Release](https://github.com/ergebnis/license/actions/workflows/release.yaml/badge.svg)](https://github.com/ergebnis/license/actions/workflows/release.yaml)
+[![Renew](https://github.com/ergebnis/license/actions/workflows/renew.yaml/badge.svg)](https://github.com/ergebnis/license/actions/workflows/renew.yaml)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/license/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/license)
 
