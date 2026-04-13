@@ -36,16 +36,14 @@ final class TemplateTest extends Framework\TestCase
         $when = $faker->dateTime()->format('Y');
         $who = $faker->name();
 
-        $template = Template::fromString(
-            <<<'EOF'
+        $template = Template::fromString(<<<'EOF'
 Ah!
 
 This was done in <when> by <who>.
 
 Who would have thought?
 
-EOF
-        );
+EOF);
 
         $expected = <<<EOF
 Ah!
