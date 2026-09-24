@@ -1,32 +1,62 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method Ergebnis\\\\License\\\\Header\\:\\:__construct\\(\\) has parameter \\$file with a nullable type declaration\\.$#"
+			message: '#^Method Ergebnis\\License\\Header\:\:__construct\(\) has parameter \$file with a nullable type declaration\.$#'
+			identifier: ergebnis.noParameterWithNullableTypeDeclaration
 			count: 1
 			path: src/Header.php
 
 		-
-			message: "#^Call to function is_string\\(\\) with string will always evaluate to true\\.$#"
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
 			count: 2
 			path: src/Template.php
 
 		-
-			message: "#^Strict comparison using \\!\\=\\= between array\\{\\} and array\\{\\} will always evaluate to false\\.$#"
+			message: '#^Strict comparison using \!\=\= between array\{\} and array\{\} will always evaluate to false\.$#'
+			identifier: notIdentical.alwaysFalse
 			count: 2
 			path: src/Template.php
 
 		-
-			message: "#^Generator expects key type string, int given\\.$#"
+			message: '#^Parameter \#3 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: test/Unit/Exception/InvalidFileTest.php
+
+		-
+			message: '#^@dataProvider \\Ergebnis\\DataProvider\\StringProvider\:\:empty\(\) related method not found\.$#'
+			identifier: phpunit.dataProviderMethod
+			count: 1
+			path: test/Unit/FileTest.php
+
+		-
+			message: '#^Generator expects key type string, int given\.$#'
+			identifier: generator.keyType
 			count: 1
 			path: test/Unit/RangeTest.php
 
 		-
-			message: "#^Method Ergebnis\\\\License\\\\Test\\\\Unit\\\\TemplateTest\\:\\:testToStringRejectsReplacementsWithInvalidValues\\(\\) has parameter \\$replacements with no value type specified in iterable type array\\.$#"
+			message: '#^@dataProvider \\Ergebnis\\DataProvider\\StringProvider\:\:empty\(\) related method not found\.$#'
+			identifier: phpunit.dataProviderMethod
 			count: 1
 			path: test/Unit/TemplateTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$replacements of method Ergebnis\\\\License\\\\Template\\:\\:toString\\(\\) expects array\\<string, string\\>, array\\<int, string\\> given\\.$#"
+			message: '#^Method Ergebnis\\License\\Test\\Unit\\TemplateTest\:\:testToStringRejectsReplacementsWithInvalidValues\(\) has parameter \$replacements with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: test/Unit/TemplateTest.php
+
+		-
+			message: '#^Parameter \#1 \$replacements of method Ergebnis\\License\\Template\:\:toString\(\) expects array\<string, string\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: test/Unit/TemplateTest.php
+
+		-
+			message: '#^Parameter \#1 \$replacements of method Ergebnis\\License\\Template\:\:toString\(\) expects array\<string, string\>, array\<int, string\> given\.$#'
+			identifier: argument.type
 			count: 1
 			path: test/Unit/TemplateTest.php
 
