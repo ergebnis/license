@@ -13,8 +13,6 @@ declare(strict_types=1);
 
 namespace Ergebnis\License;
 
-use Ergebnis\License\Exception\InvalidHolder;
-
 final class Holder
 {
     private string $value;
@@ -30,7 +28,7 @@ final class Holder
     public static function fromString(string $value): self
     {
         if (1 === \preg_match('/^(\r\n|\n|\r)/', $value)) {
-            throw InvalidHolder::multiline();
+            throw Exception\InvalidHolder::multiline();
         }
 
         $trimmed = \trim($value);
