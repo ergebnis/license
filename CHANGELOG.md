@@ -166,6 +166,7 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [#422]: https://github.com/ergebnis/license/pull/422
 [#533]: https://github.com/ergebnis/license/pull/533
 [#534]: https://github.com/ergebnis/license/pull/534
+[#535]: https://github.com/ergebnis/license/pull/535
 [#550]: https://github.com/ergebnis/license/pull/550
 [#644]: https://github.com/ergebnis/license/pull/644
 [#734]: https://github.com/ergebnis/license/pull/734
