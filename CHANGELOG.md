@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`2.7.0...main`][2.7.0...main].
+For a full diff see [`2.8.0...main`][2.8.0...main].
+
+## [`2.8.0`][2.8.0]
+
+For a full diff see [`2.7.0...2.8.0`][2.7.0...2.8.0].
 
 ### Changed
 
@@ -154,7 +158,9 @@ For a full diff see [`675601b...0.1.0`][675601b...0.1.0].
 [2.4.0...2.5.0]: https://github.com/ergebnis/license/compare/2.4.0...2.5.0
 [2.5.0...2.6.0]: https://github.com/ergebnis/license/compare/2.5.0...2.6.0
 [2.6.0...2.7.0]: https://github.com/ergebnis/license/compare/2.6.0...2.7.0
-[2.7.0...main]: https://github.com/ergebnis/license/compare/2.7.0...main
+[2.7.0...2.8.0]: https://github.com/ergebnis/license/compare/2.7.0...2.8.0
+[2.8.0]: https://github.com/ergebnis/license/releases/tag/2.8.0
+[2.8.0...main]: https://github.com/ergebnis/license/compare/2.8.0...main
 
 [#7]: https://github.com/ergebnis/license/pull/7
 [#10]: https://github.com/ergebnis/license/pull/10
