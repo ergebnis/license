@@ -9,7 +9,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/license/v/stable)](https://packagist.org/packages/ergebnis/license)
 [![Total Downloads](https://poser.pugx.org/ergebnis/license/downloads)](https://packagist.org/packages/ergebnis/license)
-[![Monthly Downloads](http://poser.pugx.org/ergebnis/license/d/monthly)](https://packagist.org/packages/ergebnis/license)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/license/d/monthly)](https://packagist.org/packages/ergebnis/license)
 
 This project provides a [`composer`](https://getcomposer.org) package with an abstraction of an open-source license.
 
