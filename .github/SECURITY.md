@@ -4,13 +4,13 @@
 
 The following versions of `ergebnis/license` have active support:
 
-- `^2.10.0`
+- `^2.11.0`
 
 ## Unsupported Versions
 
 The following versions of `ergebnis/license` have reached their end of life:
 
-- `<2.10.0`
+- `<2.11.0`
 
 ## Reporting a Vulnerability
 
