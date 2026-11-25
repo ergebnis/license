@@ -37,22 +37,22 @@ final class TemplateTest extends Framework\TestCase
         $who = $faker->name();
 
         $template = Template::fromString(<<<'EOF'
-Ah!
+            Ah!
 
-This was done in <when> by <who>.
+            This was done in <when> by <who>.
 
-Who would have thought?
+            Who would have thought?
 
-EOF);
+            EOF);
 
         $expected = <<<EOF
-Ah!
+            Ah!
 
-This was done in {$when} by {$who}.
+            This was done in {$when} by {$who}.
 
-Who would have thought?
+            Who would have thought?
 
-EOF;
+            EOF;
 
         self::assertSame($expected, $template->toString([
             '<when>' => $when,
@@ -95,13 +95,13 @@ EOF;
         $template = Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
 
         $expected = <<<EOF
-Ah!
+            Ah!
 
-This was done in {$when} by {$who}.
+            This was done in {$when} by {$who}.
 
-Who would have thought?
+            Who would have thought?
 
-EOF;
+            EOF;
 
         self::assertSame($expected, $template->toString([
             '<when>' => $when,

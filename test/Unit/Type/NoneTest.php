@@ -54,11 +54,11 @@ final class NoneTest extends Framework\TestCase
         );
 
         $expected = <<<TXT
-Copyright (c) {$range->toString()} {$holder->toString()}
+            Copyright (c) {$range->toString()} {$holder->toString()}
 
-@see {$url->toString()}
+            @see {$url->toString()}
 
-TXT;
+            TXT;
 
         self::assertSame($expected, $license->header());
     }
