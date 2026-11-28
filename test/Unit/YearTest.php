@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
-use Ergebnis\License\Exception;
-use Ergebnis\License\Test;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -25,16 +23,16 @@ use PHPUnit\Framework;
  */
 final class YearTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     /**
      * @dataProvider provideInvalidValue
      */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
-        $this->expectException(Exception\InvalidYear::class);
+        $this->expectException(License\Exception\InvalidYear::class);
 
-        Year::fromString($value);
+        License\Year::fromString($value);
     }
 
     /**
@@ -68,7 +66,7 @@ final class YearTest extends Framework\TestCase
      */
     public function testFromStringReturnsYear(string $value): void
     {
-        $year = Year::fromString($value);
+        $year = License\Year::fromString($value);
 
         self::assertSame($value, $year->toString());
     }
@@ -95,8 +93,8 @@ final class YearTest extends Framework\TestCase
     {
         $faker = self::faker()->unique();
 
-        $one = Year::fromString($faker->year());
-        $two = Year::fromString($faker->year());
+        $one = License\Year::fromString($faker->year());
+        $two = License\Year::fromString($faker->year());
 
         self::assertFalse($one->equals($two));
     }
@@ -105,8 +103,8 @@ final class YearTest extends Framework\TestCase
     {
         $value = self::faker()->year();
 
-        $one = Year::fromString($value);
-        $two = Year::fromString($value);
+        $one = License\Year::fromString($value);
+        $two = License\Year::fromString($value);
 
         self::assertTrue($one->equals($two));
     }
@@ -115,24 +113,24 @@ final class YearTest extends Framework\TestCase
     {
         $value = self::faker()->year();
 
-        $one = Year::fromString($value);
-        $two = Year::fromString($value);
+        $one = License\Year::fromString($value);
+        $two = License\Year::fromString($value);
 
         self::assertFalse($one->greaterThan($two));
     }
 
     public function testGreaterThanReturnsFalseWhenValueIsLess(): void
     {
-        $one = Year::fromString('2019');
-        $two = Year::fromString('2020');
+        $one = License\Year::fromString('2019');
+        $two = License\Year::fromString('2020');
 
         self::assertFalse($one->greaterThan($two));
     }
 
     public function testGreaterThanReturnsTrueWhenValueIsGreater(): void
     {
-        $one = Year::fromString('2020');
-        $two = Year::fromString('2019');
+        $one = License\Year::fromString('2020');
+        $two = License\Year::fromString('2019');
 
         self::assertTrue($one->greaterThan($two));
     }

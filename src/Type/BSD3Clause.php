@@ -13,34 +13,29 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Type;
 
-use Ergebnis\License\File;
-use Ergebnis\License\Header;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Period;
-use Ergebnis\License\Template;
-use Ergebnis\License\Url;
+use Ergebnis\License;
 
 final class BSD3Clause
 {
-    private File $file;
-    private Header $header;
+    private License\File $file;
+    private License\Header $header;
 
     private function __construct(
         string $name,
-        Template $fileTemplate,
-        Template $headerTemplate,
-        Period $period,
-        Holder $holder,
-        Url $url
+        License\Template $fileTemplate,
+        License\Template $headerTemplate,
+        License\Period $period,
+        License\Holder $holder,
+        License\Url $url
     ) {
-        $file = File::create(
+        $file = License\File::create(
             $name,
             $fileTemplate,
             $period,
             $holder,
         );
 
-        $header = Header::createWithReferenceToLicenseFile(
+        $header = License\Header::createWithReferenceToLicenseFile(
             $headerTemplate,
             $period,
             $holder,
@@ -54,14 +49,14 @@ final class BSD3Clause
 
     public static function markdown(
         string $name,
-        Period $period,
-        Holder $holder,
-        Url $url
+        License\Period $period,
+        License\Holder $holder,
+        License\Url $url
     ): self {
         return new self(
             $name,
-            Template::fromFile(__DIR__ . '/../../resource/license/BSD3Clause.md'),
-            Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
+            License\Template::fromFile(__DIR__ . '/../../resource/license/BSD3Clause.md'),
+            License\Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
             $period,
             $holder,
             $url,
@@ -70,14 +65,14 @@ final class BSD3Clause
 
     public static function text(
         string $name,
-        Period $period,
-        Holder $holder,
-        Url $url
+        License\Period $period,
+        License\Holder $holder,
+        License\Url $url
     ): self {
         return new self(
             $name,
-            Template::fromFile(__DIR__ . '/../../resource/license/BSD3Clause.txt'),
-            Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
+            License\Template::fromFile(__DIR__ . '/../../resource/license/BSD3Clause.txt'),
+            License\Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt'),
             $period,
             $holder,
             $url,

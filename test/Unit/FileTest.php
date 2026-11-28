@@ -14,13 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\DataProvider;
-use Ergebnis\License\Exception;
-use Ergebnis\License\File;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Range;
-use Ergebnis\License\Template;
-use Ergebnis\License\Test;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
@@ -35,7 +29,7 @@ use Symfony\Component\Filesystem;
  */
 final class FileTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     protected function setUp(): void
     {
@@ -59,16 +53,16 @@ final class FileTest extends Framework\TestCase
     {
         $faker = self::faker();
 
-        $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $template = License\Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
+        $holder = License\Holder::fromString($faker->name());
 
-        $this->expectException(Exception\InvalidFile::class);
+        $this->expectException(License\Exception\InvalidFile::class);
 
-        File::create(
+        License\File::create(
             $name,
             $template,
             $range,
@@ -85,14 +79,14 @@ final class FileTest extends Framework\TestCase
             __DIR__,
             $faker->slug(),
         );
-        $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $template = License\Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
+        $holder = License\Holder::fromString($faker->name());
 
-        $file = File::create(
+        $file = License\File::create(
             $name,
             $template,
             $range,
@@ -111,14 +105,14 @@ final class FileTest extends Framework\TestCase
             self::temporaryDirectory(),
             $faker->slug(),
         );
-        $template = Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $template = License\Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt');
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
+        $holder = License\Holder::fromString($faker->name());
 
-        $file = File::create(
+        $file = License\File::create(
             $name,
             $template,
             $range,

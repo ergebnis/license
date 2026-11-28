@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Exception;
 
-use Ergebnis\License\Year;
+use Ergebnis\License;
 
 final class InvalidRange extends \InvalidArgumentException implements Exception
 {
     public static function startYearGreaterThanEndYear(
-        Year $start,
-        Year $end
+        License\Year $start,
+        License\Year $end
     ): self {
         return new self(\sprintf(
             'Start year "%s" can not be greater than end year "%s".',
@@ -29,8 +29,8 @@ final class InvalidRange extends \InvalidArgumentException implements Exception
     }
 
     public static function startYearGreaterThanCurrentYear(
-        Year $start,
-        Year $current
+        License\Year $start,
+        License\Year $current
     ): self {
         return new self(\sprintf(
             'Start year "%s" can not be greater than current year "%s".',

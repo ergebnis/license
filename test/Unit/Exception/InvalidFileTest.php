@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception;
-use Ergebnis\License\Test;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -24,11 +23,11 @@ use PHPUnit\Framework;
  */
 final class InvalidFileTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     public function testEmptyFileNameReturnsInvalidFile(): void
     {
-        $exception = Exception\InvalidFile::emptyFileName();
+        $exception = License\Exception\InvalidFile::emptyFileName();
 
         self::assertSame('File name can not be empty.', $exception->getMessage());
     }
@@ -43,7 +42,7 @@ final class InvalidFileTest extends Framework\TestCase
             $faker->fileExtension(),
         );
 
-        $exception = Exception\InvalidFile::doesNotExist($name);
+        $exception = License\Exception\InvalidFile::doesNotExist($name);
 
         $expected = \sprintf(
             'A file with name "%s" does not exist.',
@@ -63,7 +62,7 @@ final class InvalidFileTest extends Framework\TestCase
             $faker->fileExtension(),
         );
 
-        $exception = Exception\InvalidFile::canNotBeRead($name);
+        $exception = License\Exception\InvalidFile::canNotBeRead($name);
 
         $expected = \sprintf(
             'File with name "%s" can not be read.',

@@ -14,9 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\DataProvider;
-use Ergebnis\License\Exception;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Test;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -25,7 +23,7 @@ use PHPUnit\Framework;
  */
 final class HolderTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     /**
      * @dataProvider \Ergebnis\DataProvider\StringProvider::blank
@@ -33,9 +31,9 @@ final class HolderTest extends Framework\TestCase
      */
     public function testFromStringRejectsBlankOrEmptyValue(string $value): void
     {
-        $this->expectException(Exception\InvalidHolder::class);
+        $this->expectException(License\Exception\InvalidHolder::class);
 
-        Holder::fromString($value);
+        License\Holder::fromString($value);
     }
 
     /**
@@ -43,9 +41,9 @@ final class HolderTest extends Framework\TestCase
      */
     public function testFromStringRejectsMultilineValue(string $value): void
     {
-        $this->expectException(Exception\InvalidHolder::class);
+        $this->expectException(License\Exception\InvalidHolder::class);
 
-        Holder::fromString($value);
+        License\Holder::fromString($value);
     }
 
     /**
@@ -86,7 +84,7 @@ final class HolderTest extends Framework\TestCase
      */
     public function testFromStringReturnsHolder(string $value): void
     {
-        $holder = Holder::fromString($value);
+        $holder = License\Holder::fromString($value);
 
         self::assertSame($value, $holder->toString());
     }
@@ -108,7 +106,7 @@ final class HolderTest extends Framework\TestCase
      */
     public function testFromStringReturnsHolderWithTrimmedValue(string $value): void
     {
-        $holder = Holder::fromString($value);
+        $holder = License\Holder::fromString($value);
 
         self::assertSame(\trim($value), $holder->toString());
     }

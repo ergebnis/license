@@ -13,23 +13,19 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Type;
 
-use Ergebnis\License\Header;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Period;
-use Ergebnis\License\Template;
-use Ergebnis\License\Url;
+use Ergebnis\License;
 
 final class None
 {
-    private Header $header;
+    private License\Header $header;
 
     private function __construct(
-        Template $headerTemplate,
-        Period $period,
-        Holder $holder,
-        Url $url
+        License\Template $headerTemplate,
+        License\Period $period,
+        License\Holder $holder,
+        License\Url $url
     ) {
-        $header = Header::createWithoutReferenceToLicenseFile(
+        $header = License\Header::createWithoutReferenceToLicenseFile(
             $headerTemplate,
             $period,
             $holder,
@@ -40,12 +36,12 @@ final class None
     }
 
     public static function text(
-        Period $period,
-        Holder $holder,
-        Url $url
+        License\Period $period,
+        License\Holder $holder,
+        License\Url $url
     ): self {
         return new self(
-            Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt'),
+            License\Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt'),
             $period,
             $holder,
             $url,

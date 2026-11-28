@@ -13,12 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Type;
 
-use Ergebnis\License\Holder;
-use Ergebnis\License\Range;
-use Ergebnis\License\Test;
-use Ergebnis\License\Type;
-use Ergebnis\License\Url;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -34,20 +29,20 @@ use PHPUnit\Framework;
  */
 final class NoneTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     public function testHeaderReturnsHeaderForTextLicense(): void
     {
         $faker = self::faker();
 
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $license = Type\None::text(
+        $license = License\Type\None::text(
             $range,
             $holder,
             $url,
