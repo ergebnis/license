@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
-use Ergebnis\License\Exception;
-use Ergebnis\License\Range;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -29,12 +27,12 @@ final class RangeTest extends Framework\TestCase
 {
     public function testIncludingRequiresStartYearToBeEqualOrLessThanEndYear(): void
     {
-        $start = Year::fromString('2020');
-        $end = Year::fromString('2019');
+        $start = License\Year::fromString('2020');
+        $end = License\Year::fromString('2019');
 
-        $this->expectException(Exception\InvalidRange::class);
+        $this->expectException(License\Exception\InvalidRange::class);
 
-        Range::including(
+        License\Range::including(
             $start,
             $end,
         );
@@ -42,24 +40,24 @@ final class RangeTest extends Framework\TestCase
 
     public function testIncludingReturnsRangeWhenStartYearEqualsEndYear(): void
     {
-        $start = Year::fromString('2020');
-        $end = Year::fromString('2020');
+        $start = License\Year::fromString('2020');
+        $end = License\Year::fromString('2020');
 
-        $range = Range::including(
+        $range = License\Range::including(
             $start,
             $end,
         );
 
-        self::assertInstanceOf(Year::class, $range);
+        self::assertInstanceOf(License\Year::class, $range);
         self::assertSame($start->toString(), $range->toString());
     }
 
     public function testIncludingReturnsRangeWhenStartYearIsLessThanEndYear(): void
     {
-        $start = Year::fromString('2019');
-        $end = Year::fromString('2020');
+        $start = License\Year::fromString('2019');
+        $end = License\Year::fromString('2020');
 
-        $years = Range::including(
+        $years = License\Range::including(
             $start,
             $end,
         );
@@ -70,7 +68,7 @@ final class RangeTest extends Framework\TestCase
             $end->toString(),
         );
 
-        self::assertInstanceOf(Range::class, $years);
+        self::assertInstanceOf(License\Range::class, $years);
         self::assertSame($expected, $years->toString());
     }
 
@@ -84,11 +82,11 @@ final class RangeTest extends Framework\TestCase
             $timeZone,
         );
 
-        $start = Year::fromString($now->format('Y'));
+        $start = License\Year::fromString($now->format('Y'));
 
-        $this->expectException(Exception\InvalidRange::class);
+        $this->expectException(License\Exception\InvalidRange::class);
 
-        Range::since(
+        License\Range::since(
             $start,
             $timeZone,
         );
@@ -104,14 +102,14 @@ final class RangeTest extends Framework\TestCase
             $timeZone,
         );
 
-        $start = Year::fromString($now->format('Y'));
+        $start = License\Year::fromString($now->format('Y'));
 
-        $year = Range::since(
+        $year = License\Range::since(
             $start,
             $timeZone,
         );
 
-        self::assertInstanceOf(Year::class, $year);
+        self::assertInstanceOf(License\Year::class, $year);
         self::assertSame($start->toString(), $year->toString());
     }
 
@@ -130,14 +128,14 @@ final class RangeTest extends Framework\TestCase
             $timeZone,
         );
 
-        $start = Year::fromString($twoYearsAgo->format('Y'));
+        $start = License\Year::fromString($twoYearsAgo->format('Y'));
 
-        $range = Range::since(
+        $range = License\Range::since(
             $start,
             $timeZone,
         );
 
-        self::assertInstanceOf(Range::class, $range);
+        self::assertInstanceOf(License\Range::class, $range);
 
         $expected = \sprintf(
             '%s-%s',

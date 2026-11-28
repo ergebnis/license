@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
-use Ergebnis\License\Exception;
-use Ergebnis\License\Test;
-use Ergebnis\License\Url;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -25,16 +23,16 @@ use PHPUnit\Framework;
  */
 final class UrlTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     /**
      * @dataProvider provideInvalidValue
      */
     public function testFromStringRejectsInvalidValue(string $value): void
     {
-        $this->expectException(Exception\InvalidUrl::class);
+        $this->expectException(License\Exception\InvalidUrl::class);
 
-        Url::fromString($value);
+        License\Url::fromString($value);
     }
 
     /**
@@ -60,7 +58,7 @@ final class UrlTest extends Framework\TestCase
      */
     public function testFromStringReturnsUrl(string $value): void
     {
-        $url = Url::fromString($value);
+        $url = License\Url::fromString($value);
 
         self::assertSame($value, $url->toString());
     }
@@ -82,7 +80,7 @@ final class UrlTest extends Framework\TestCase
      */
     public function testFromStringReturnsUrlWithTrimmedValue(string $value): void
     {
-        $url = Url::fromString($value);
+        $url = License\Url::fromString($value);
 
         self::assertSame(\trim($value), $url->toString());
     }
@@ -108,8 +106,8 @@ final class UrlTest extends Framework\TestCase
     private static function validValues(): array
     {
         return [
-            'string-https' => 'https://github.com/ergebnis/php-cs-fixer-config',
             'string-http' => 'http://github.com/ergebnis/php-cs-fixer-config',
+            'string-https' => 'https://github.com/ergebnis/php-cs-fixer-config',
         ];
     }
 }

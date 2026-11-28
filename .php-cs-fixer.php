@@ -12,22 +12,17 @@ declare(strict_types=1);
  */
 
 use Ergebnis\License;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Range;
-use Ergebnis\License\Type;
-use Ergebnis\License\Url;
-use Ergebnis\License\Year;
 use Ergebnis\PhpCsFixer;
 use PhpCsFixer\Finder;
 
-$license = Type\MIT::markdown(
+$license = License\Type\MIT::markdown(
     __DIR__ . '/LICENSE.md',
-    Range::since(
-        Year::fromString('2020'),
+    License\Range::since(
+        License\Year::fromString('2020'),
         new DateTimeZone('UTC'),
     ),
-    Holder::fromString('Andreas Möller'),
-    Url::fromString('https://github.com/ergebnis/license'),
+    License\Holder::fromString('Andreas Möller'),
+    License\Url::fromString('https://github.com/ergebnis/license'),
 );
 
 $license->save();

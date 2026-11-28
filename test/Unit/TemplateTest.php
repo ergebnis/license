@@ -14,9 +14,7 @@ declare(strict_types=1);
 namespace Ergebnis\License\Test\Unit;
 
 use Ergebnis\DataProvider;
-use Ergebnis\License\Exception;
-use Ergebnis\License\Template;
-use Ergebnis\License\Test;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -27,7 +25,7 @@ use PHPUnit\Framework;
  */
 final class TemplateTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     public function testFromStringReturnsTemplate(): void
     {
@@ -36,7 +34,7 @@ final class TemplateTest extends Framework\TestCase
         $when = $faker->dateTime()->format('Y');
         $who = $faker->name();
 
-        $template = Template::fromString(<<<'EOF'
+        $template = License\Template::fromString(<<<'EOF'
             Ah!
 
             This was done in <when> by <who>.
@@ -66,23 +64,23 @@ final class TemplateTest extends Framework\TestCase
      */
     public function testFromFileRejectsBlankOrEmptyFileName(string $name): void
     {
-        $this->expectException(Exception\InvalidFile::class);
+        $this->expectException(License\Exception\InvalidFile::class);
 
-        Template::fromFile($name);
+        License\Template::fromFile($name);
     }
 
     public function testFromFileRejectsNonExistentFile(): void
     {
-        $this->expectException(Exception\InvalidFile::class);
+        $this->expectException(License\Exception\InvalidFile::class);
 
-        Template::fromFile(__DIR__ . '/does-not-exist.txt');
+        License\Template::fromFile(__DIR__ . '/does-not-exist.txt');
     }
 
     public function testFromFileRejectsFileReferencingDirectory(): void
     {
-        $this->expectException(Exception\InvalidFile::class);
+        $this->expectException(License\Exception\InvalidFile::class);
 
-        Template::fromFile(__DIR__);
+        License\Template::fromFile(__DIR__);
     }
 
     public function testFromFileReturnsTemplate(): void
@@ -92,7 +90,7 @@ final class TemplateTest extends Framework\TestCase
         $when = $faker->dateTime()->format('Y');
         $who = $faker->name();
 
-        $template = Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
+        $template = License\Template::fromFile(__DIR__ . '/../Fixture/Template/template.txt');
 
         $expected = <<<EOF
             Ah!
@@ -117,9 +115,9 @@ final class TemplateTest extends Framework\TestCase
             $faker->numberBetween(1) => $faker->word(),
         ];
 
-        $template = Template::fromString('');
+        $template = License\Template::fromString('');
 
-        $this->expectException(Exception\InvalidReplacements::class);
+        $this->expectException(License\Exception\InvalidReplacements::class);
 
         $template->toString($replacements);
     }
@@ -129,9 +127,9 @@ final class TemplateTest extends Framework\TestCase
      */
     public function testToStringRejectsReplacementsWithInvalidValues(array $replacements): void
     {
-        $template = Template::fromString('');
+        $template = License\Template::fromString('');
 
-        $this->expectException(Exception\InvalidReplacements::class);
+        $this->expectException(License\Exception\InvalidReplacements::class);
 
         $template->toString($replacements);
     }

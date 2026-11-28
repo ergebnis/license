@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Exception;
 
-use Ergebnis\License\Exception;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -26,10 +25,10 @@ final class InvalidRangeTest extends Framework\TestCase
 {
     public function testStartYearGreaterThanEndYearReturnsInvalidRange(): void
     {
-        $start = Year::fromString('2020');
-        $end = Year::fromString('2019');
+        $start = License\Year::fromString('2020');
+        $end = License\Year::fromString('2019');
 
-        $exception = Exception\InvalidRange::startYearGreaterThanEndYear(
+        $exception = License\Exception\InvalidRange::startYearGreaterThanEndYear(
             $start,
             $end,
         );
@@ -45,10 +44,10 @@ final class InvalidRangeTest extends Framework\TestCase
 
     public function testStartYearGreaterThanCurrentYearReturnsInvalidRange(): void
     {
-        $start = Year::fromString('2025');
-        $current = Year::fromString('2020');
+        $start = License\Year::fromString('2025');
+        $current = License\Year::fromString('2020');
 
-        $exception = Exception\InvalidRange::startYearGreaterThanCurrentYear(
+        $exception = License\Exception\InvalidRange::startYearGreaterThanCurrentYear(
             $start,
             $current,
         );

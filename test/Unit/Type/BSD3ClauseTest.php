@@ -13,12 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit\Type;
 
-use Ergebnis\License\Holder;
-use Ergebnis\License\Range;
-use Ergebnis\License\Test;
-use Ergebnis\License\Type;
-use Ergebnis\License\Url;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 use Symfony\Component\Filesystem;
 
@@ -35,7 +30,7 @@ use Symfony\Component\Filesystem;
  */
 final class BSD3ClauseTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     protected function setUp(): void
     {
@@ -64,14 +59,14 @@ final class BSD3ClauseTest extends Framework\TestCase
             self::temporaryDirectory(),
             $baseName,
         );
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $license = Type\BSD3Clause::markdown(
+        $license = License\Type\BSD3Clause::markdown(
             $name,
             $range,
             $holder,
@@ -104,14 +99,14 @@ final class BSD3ClauseTest extends Framework\TestCase
             self::temporaryDirectory(),
             $name,
         );
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $license = Type\BSD3Clause::text(
+        $license = License\Type\BSD3Clause::text(
             $baseName,
             $range,
             $holder,
@@ -140,14 +135,14 @@ final class BSD3ClauseTest extends Framework\TestCase
             self::temporaryDirectory(),
             $faker->slug(),
         );
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $license = Type\BSD3Clause::markdown(
+        $license = License\Type\BSD3Clause::markdown(
             $name,
             $range,
             $holder,
@@ -193,14 +188,14 @@ final class BSD3ClauseTest extends Framework\TestCase
             self::temporaryDirectory(),
             $faker->slug(),
         );
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $license = Type\BSD3Clause::text(
+        $license = License\Type\BSD3Clause::text(
             $name,
             $range,
             $holder,

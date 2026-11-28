@@ -13,14 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\License\Test\Unit;
 
-use Ergebnis\License\File;
-use Ergebnis\License\Header;
-use Ergebnis\License\Holder;
-use Ergebnis\License\Range;
-use Ergebnis\License\Template;
-use Ergebnis\License\Test;
-use Ergebnis\License\Url;
-use Ergebnis\License\Year;
+use Ergebnis\License;
 use PHPUnit\Framework;
 
 /**
@@ -35,31 +28,31 @@ use PHPUnit\Framework;
  */
 final class HeaderTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use License\Test\Util\Helper;
 
     public function testCreateWithReferenceToLicenseFileReturnsHeader(): void
     {
         $faker = self::faker();
 
-        $template = Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt');
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $template = License\Template::fromFile(__DIR__ . '/../../resource/header/with-reference-to-license-file.txt');
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $file = File::create(
+        $holder = License\Holder::fromString($faker->name());
+        $file = License\File::create(
             \sprintf(
                 '%s/%s.txt',
                 __DIR__,
                 $faker->slug(),
             ),
-            Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt'),
+            License\Template::fromFile(__DIR__ . '/../../resource/license/MIT.txt'),
             $range,
             $holder,
         );
-        $url = Url::fromString($faker->url());
+        $url = License\Url::fromString($faker->url());
 
-        $header = Header::createWithReferenceToLicenseFile(
+        $header = License\Header::createWithReferenceToLicenseFile(
             $template,
             $range,
             $holder,
@@ -81,15 +74,15 @@ final class HeaderTest extends Framework\TestCase
     {
         $faker = self::faker();
 
-        $template = Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt');
-        $range = Range::since(
-            Year::fromString($faker->year()),
+        $template = License\Template::fromFile(__DIR__ . '/../../resource/header/without-reference-to-license-file.txt');
+        $range = License\Range::since(
+            License\Year::fromString($faker->year()),
             new \DateTimeZone($faker->timezone()),
         );
-        $holder = Holder::fromString($faker->name());
-        $url = Url::fromString($faker->url());
+        $holder = License\Holder::fromString($faker->name());
+        $url = License\Url::fromString($faker->url());
 
-        $header = Header::createWithoutReferenceToLicenseFile(
+        $header = License\Header::createWithoutReferenceToLicenseFile(
             $template,
             $range,
             $holder,
